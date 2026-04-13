@@ -1,0 +1,10 @@
+﻿CAMPO,DESCRIPCION,TIPO_DATO,LONGITUD,RANGO_VALIDO
+AGRUPACION1,Primer nivel de agrupación al que pertenece el dato,Varchar,70,Texto
+AGRUPACION2,Segundo nivel de agrupación al que pertenece el dato,Varchar,70,Texto
+AGRUPACION3,Tercer nivel de agrupación al que pertenece el dato,Varchar,60,Texto
+AGRUPACION4,Cuarto nivel de agrupación al que pertenece el dato,Varchar,30,Texto
+AGRUPACION5,Quinto nivel de agrupación al que pertenece el dato,Varchar,30,Texto
+DESCRIPCION,Detalle del significado de la variable,Varchar,100,Texto
+VALOR,Valor de la variable en las diferentes agrupaciones,Float,"10,8",[0-9999999999.99999999]
+TABULADO,Tabulado del que precede la información,Varchar,15,Texto
+ESTATUS,Descripción de estatus de los datos,Varchar,100,Cifras Definitivas

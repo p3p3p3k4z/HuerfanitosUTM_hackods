@@ -1,0 +1,33 @@
+﻿
+Identifier: DCAT-MEX-INEGI-ENA-2012
+
+Title: Encuesta Nacional Agropecuaria (ENA)
+
+Description: Obtener Información estadística básica y actualizada de la producción de los cultivos y especies pecuarias más importantes para el país, para generar indicadores económicos y de desarrollo actualizados, que permitan fortalecer con información oportuna al Sistema de Información Agropecuaria Nacional. 
+ Nota: Los espacios vacíos o en blanco indican que para la variable correspondiente no hay representatividad estadística a nivel de entidad federativa.
+        -Para los conjuntos agrícola_nac_estimacion y agrícola_ent_estimacion: Para algunos cultivos con superficie sembrada y/o cosechada y producción se presenta 0 o vacío debido a que estadísticamente es insuficiente para la estimación de dicha variable.
+        -Para el conjunto pecuaria_nac_aves: Este tabulado no tiene parámetros porque los datos se obtuvieron a partir de una muestra determinística.
+        -Para el conjunto pecuaria_ent_existencias: Caso1: En el caso de los valores ceros o vacío No Aplica porque la información es estadisticamente insuficiente para estimar la variable. Caso 2: Los datos nacionales incluyen la información del ganado porcino del resto de las entidades federativas. 
+        -Para el conjunto pecuaria_ent_estimacion: Caso1: En el caso de los valores ceros o vacío No Aplica porque la información es estadisticamente insuficiente para estimar la variable. Caso 2: Los datos nacionales incluyen la información del ganado porcino del resto de las entidades federativas. (IV26, IV26_1_1, IV26_1_2, IV26_1_2_1, IV26_1_3, IV26_1_5, IV26_1_5_1, IV26_1_5_2).
+
+Modified: 2017-01-26
+
+Publisher: Instituto Nacional de Estadística y Geografía (INEGI)
+
+Mbox: atencion.usuarios@inegi.org.mx 
+
+License: http://www.beta.inegi.org.mx/contenidos/inegi/doc/terminos_sitio.pdf
+
+DataDictionary: 
+
+Keyword: Unidad de Producción, Superficie, Suelo, Temporal, Riego, Agricultura Protegida, Agricultura Alternativa, Viveros, Invernaderos, Ganado bovino, Ganado porcino, Aves, Otras especies animales, Venta, Tractores, Crédito, Seguro, Mano de Obra, Productor.
+
+ContactPoint: Lic. José de Jesús Esquivel de la Rosa, 01800 111 4634
+
+Temporal: 2012
+
+Spatial: Estados Unidos Mexicanos.
+
+AccrualPeriodicity: Bienal
+
+Distribution: 

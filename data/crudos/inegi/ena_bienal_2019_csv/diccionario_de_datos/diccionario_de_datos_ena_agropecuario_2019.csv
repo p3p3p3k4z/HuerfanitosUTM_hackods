@@ -1,0 +1,8 @@
+﻿CAMPO,DESCRIPCION,TIPO_DATO,LONGITUD,CODIGO_VALIDO
+AREA_GEOGRAFICA,El corte de la información a nivel nacional o estatal,Varchar2,200,Texto
+TEMA,Tema de la información levantada en el cuestionario,Varchar2,200,Texto
+SUBTEMA,Subtema de la información levantada en el cuestionario,Varchar2,200,Texto
+VARIABLE,Valor de la variable en las diferentes agrupaciones,Varchar2,200,Texto
+DENOMINACION,Son las categorías de variable,Varchar2,150,Texto
+VALOR,Valor de la variable del cruce del área geográfica y denominación,Number,"10,8",0-9999999999.99999999
+UNIDAD_MEDIDA,La unidad de medida de variable ,Varchar2,100,Texto

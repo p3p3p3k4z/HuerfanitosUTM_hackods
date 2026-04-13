@@ -1,0 +1,6 @@
+﻿COLUMNA,DESCRIPCION,TIPO_DATO,LONGITUD,CODIGO_VALIDO
+TIPO_DE_DATO,Es la presentación de la información.,varchar,100,"Estimación,Porcentaje,Total,Limite de confianza inferior,Limite de confianza superior,Coeficiente de variacion"
+IV30,"Existencias totales de aves: Número total de gallos, gallinas, pollos y pollitos que posee la unidad de producción en una fecha determinada. Se excluyen los gallos de pelea. Unidad de medida: Cabezas",float,10.2,0000000000.00-9999999999.99
+IV32_6_1CNT_N,Producción media diaria de huevo: Producción promedio diaria de huevo para plato en la unidad de producción. Unidad de medida: Toneladas,float,10.2,0000000000.00-9999999999.99
+IV32_6_2PSO,Precio promedio por kilogramo de huevo: Cantidad de dinero recibida por la venta del huevo por kilogramo. Unidad de medida: Pesos,float,10.2,0000000000.00-9999999999.99
+ESTATUS,"Descripción de estatus de los datos.El estatus de la información puede ser : Cifras Definitivas, Cifras Revisadas, Cifras Preliminares.",varchar,100,Cifras Definitivas

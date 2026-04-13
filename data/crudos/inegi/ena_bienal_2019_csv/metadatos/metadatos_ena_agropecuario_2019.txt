@@ -1,0 +1,36 @@
+
+identifier: MEX-INEGI.EEC2.02-ENA-2019
+
+title: Encuesta Nacional Agropecuaria. ENA 2019. Bienal. Cifras definitivas.
+
+description: Proveer información estadística básica de las unidades de producción agrícola y pecuaria, en variables cuantitativas y cualitativas que muestran las características de las unidades de producción, así como la forma de producir los cultivos y las especies ganaderas más importantes del país; estos datos permiten el análisis y la investigación de la estructura económica del sector agropecuario, además de que contribuyen a fortalecer el Subsistema de Información Estadística Económica. 
+
+Nota: Los espacios vacíos o en blanco indican que para la variable correspondiente no hay representatividad estadística a nivel nacional o de entidad federativa.
+Para el conjunto Agricultura, uso del suelo, sistemas de riego, calidad y origen del agua: para algunos cultivos con superficie sembrada y/o cosechada y producción se presenta 0 debido a que estadísticamente la información es insuficiente para la estimación de dicha variable.
+Para el conjunto Cría y explotación de animales: hay entidades federativas en las que se presenta cero porque la información es estadísticamente insuficiente para estimar la variable. Los datos nacionales incluyen la información del ganado bovino del resto de las entidades federativas.
+ Para todos los conjuntos: para efectos de integración del tabulado cuando la estimación es el 100 %, no es necesario calcular los límites ni el coeficiente de variación del complemento de la variable. 
+Característica de la estimación: Se considera como estimación ALTA cuando el coeficiente de variación está en el rango de 0 a <20 %; se considera como estimación MODERADA cuando el coeficiente de variación está en el rango de 20% a <30 % y se considera como estimación BAJA (Para fines descriptivos e identificación de tendencias), cuando el coeficiente de variación es 30 % o mayor.
+ En agosto de 2020, se incorporan 47 tabulados nacionales; por entidad federativa; cultivo; función y actividad zootécnica; calidad del ganado; dependencia de la razón social, remuneración y productoras(es) participantes; lugar de procedencia, promedio de días contratados, horas del jornal y pago; tipo de maquinaria; rangos de edad; nivel de estudios; auto adscripción y condición de habla indígena: ena19_nac_agri01.xlsx, ena19_ent_agri02.xlsx, ena19_nac_agri04.xlsx ena19_nac_agri05.xlsx ena19_nac_agri06.xlsx ena19_nac_agri07.xlsx ena19_nac_agri08.xlsx ena19_nac_agri09.xlsx ena19_nac_agri13.xlsx , ena19_ent_cria01.xlsx; ena19_nac_cria02.xlsx, ena19_nac_cria03.xlsx, ena19_nac_cria04.xlsx, ena19_nac_cria05.xlsx, ena19_nac_cria06.xlsx, ena19_nac_cria07.xlsx, ena19_nac_cria08-xlsx, ena19_nac_cria09.xlsx, ena19_nac_cria10.xlsx, ena19_nac_cria11.xlsx, ena19_nac_cria12.xlsx, ena19_nac_cria13.xlsx, ena19_nac_cria13a.xlsx, ena19_nac_cria14.xlsx, ena19_nac_cria15.xlsx, ena19_nac_cria16.xlsx, ena19_nac_mo01.xlsx, ena19_nac_mo02.xlsx, ena19_nac_maq01.xlsx, ena19_nac_maq02.xlsx, ena19_nac_maq03.xlsx, ena19_nac_maq04.xlsx, ena19_nac_maq05.xlsx, ena19_nac_cred01.xlsx, ena19_nac_cred02.xlsx, ena19_nac_cred03.xlsx, ena19_nac_cred04.xlsx, ena19_nac_cred05.xlsx, ena19_nac_tics01.xlsx, ena19_nac_prob01.xlsx, ena19_nac_prob02.xlsx, ena19_nac_amb01.xlsx, ena19_nac_amb02.xlsx, ena19_nac_amb03.xlsx, ena19_nac_soci01.xlsx, ena19_nac_soci02.xlsx, ena19_nac_soci03.xlsx,
+Además 43 archivos con los indicadores de precisión estadística correspondientes a la ENA 2019: ena19_nac_ipagri01.xlsx, ena19_ent_ipagri02.xlsx, ena19_nac_ipagri04.xlsx ena19_nac_ipagri05.xlsx ena19_nac_ipagri06.xlsx ena19_nac_ipagri07.xlsx ena19_nac_ipagri08.xlsx ena19_nac_ipagri09.xlsx ena19_nac_ipagri13.xlsx , ena19_ent_ipcria01.xlsx; ena19_nac_ipcria02.xlsx, ena19_nac_ipcria03.xlsx, ena19_nac_ipcria04.xlsx, ena19_nac_ipcria05.xlsx, ena19_nac_ipcria06.xlsx, ena19_nac_ipcria07,xlsx, ena19_nac_ipcria08-xlsx, ena19_nac_ipcria09.xlsx, ena19_nac_ipcria10.xlsx, ena19_nac_ipcria11-xlsx, ena19_nac_ipmo01.xlsx, ena19_nac_ipmo02.xlsx, ena19_nac_ipmaq01.xlsx, ena19_nac_ipmaq02.xlsx, ena19_nac_ipmaq03.xlsx, ena19_nac_ipmaq04.xlsx, ena19_nac_ipmaq05.xlsx, ena19_nac_ipcred01.xlsx, ena19_nac_ipcred02.xlsx, ena19_nac_ipcred03.xlsx, ena19_nac_ipcred04.xlsx, ena19_nac_ipcred05.xlsx, ena19_nac_iptics01.xlsx, ena19_nac_ipprob01.xlsx, ena19_nac_ipprob02.xlsx, ena19_nac_ipamb01.xlsx, ena19_nac_ipamb02.xlsx, ena19_nac_ipamb03.xlsx, ena19_nac_ipsoci01.xlsx, ena19_nac_ipsoci02.xlsx, ena19_nac_ipsoci03.xlsx.
+
+modified: 2020-10-29
+
+publisher: Instituto Nacional de Estadística y Geografía (INEGI)
+
+mbox: atencion.usuarios@inegi.org.mx
+
+license: https://www.inegi.org.mx/inegi/terminos.html 
+
+dataDictionary: 
+
+keyword: "Unidad de producción", "Superficie", “Producción”, "Temporal", "Riego", “Anuales”, “Perennes” "Agricultura” "Cielo abierto", "Ganado bovino", "Ganado porcino", "Aves", "Avícola", “Mano de obra”, “Productores”, "Tractores", “Maquinaria”, "Crédito", “Medio ambiente”, “Tecnologías”, "Sociodemográficas", "Productor"
+
+contactPoint: Lic. José de Jesús Esquivel de la Rosa, 800 111 4634
+
+temporal: 2018-10-2019-09
+
+spatial: Estados Unidos Mexicanos
+
+accrualPeriodicity: Bienal
+
+distribution: https://www.inegi.org.mx/programas/ena/2019/ 

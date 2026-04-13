@@ -1,0 +1,33 @@
+﻿
+Identifier: DCAT-MEX-INEGI-ENA-2014
+
+Title: Encuesta Nacional Agropecuaria (ENA)
+
+Description: Obtener información estadística básica y actualizada de la producción de los cultivos y especies pecuarias más importantes para el país, para generar indicadores económicos y de desarrollo actualizados, que permitan fortalecer con información oportuna al Sistema de Información Agropecuaria Nacional.
+            Nota: -Los espacios vacíos o en blanco indican que para la variable correspondiente no hay representatividad estadística a nivel de entidad federativa.
+                  -Para los conjuntos agrícola_nacional Y agricola_entidad: Para algunos cultivos con superficie sembrada y/o cosechada y producción se presenta 0 o vacío debido a que estadísticamente es insuficiente para la estimación de dicha variable.
+                  -Para el conjunto pecuaria_entidad: Caso1: En el caso de los valores ceros o vacío: No Aplica porque la información es estadisticamente insuficiente para estimar la variable. Caso 2: Los datos nacionales incluyen la información del ganado bovino o porcino del resto de las entidades federativas.
+                  -Para el conjunto agropecuaria_nacional: Para efectos de integración del tabulado cuando la estimación es el 100 %, no es necesario calcular los límites ni el coeficiente de variación del complemento de la variable.
+                  -Característica de la estimación: Se considera como estimación BUENA cuando el coeficiente de variación está en el rango de 0 a 20 %; se considera como estimación ACEPTABLE cuando el coeficiente de variación está en el rango de >20 a 30 % y se considera como estimación CON RESERVA (Para fines descriptivos e identificación de tendencias), cuando el coeficiente de variación es mayor al 30 %.
+
+Modified: 2017-04-27
+
+Publisher: Instituto Nacional de Estadística y Geografía (INEGI)
+
+Mbox: atencion.usuarios@inegi.org.mx 
+
+License: http://www.beta.inegi.org.mx/contenidos/inegi/doc/terminos_sitio.pdf
+
+DataDictionary: 
+
+Keyword: Unidad de producción, Superficie, Temporal, Riego, Agricultura protegida, Viveros, Invernaderos, Ganado bovino, Ganado porcino, Aves, Avícola, Otras especies animales, Forestal, Recolección, Tractores, Crédito, Seguro, Mano de Obra, Productor.
+
+ContactPoint: Lic. José de Jesús Esquivel de la Rosa, 01800 111 4634
+
+Temporal: 2014
+
+Spatial: Estados Unidos Mexicanos.
+
+AccrualPeriodicity: Bienal
+
+Distribution: 

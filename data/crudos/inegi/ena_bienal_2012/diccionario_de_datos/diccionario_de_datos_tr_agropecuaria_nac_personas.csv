@@ -1,0 +1,26 @@
+﻿COLUMNA,DESCRIPCION,TIPO_DATO,LONGITUD,CODIGO_VALIDO
+TIPO_DE_DATO,Es la presentación de la información.,varchar,100,"Estimación,Porcentaje,Total,Limite de confianza inferior,Limite de confianza superior,Coeficiente de variacion"
+XII50_HOMBRE,PRODUCTORES_HOMBRES : Genero masculino del productor que se encuentra en la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_MUJER,PRODUCTORES_MUJERES : Genero femenino del productor que se encuentra en la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_LENG_IND_HOM,PRODUCTORES_QUE_HABLAN_LENGUA_INDIGENA_HOMBRES : Forma verbal tradicional de comunicación propia de una etnia a la que puede pertenecer el productor hombre. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_LENG_IND_MUJ,PRODUCTORES_QUE_HABLAN_LENGUA_INDIGENA_MUJERES : Forma verbal tradicional de comunicación propia de una etnia a la que puede pertenecer el productor mujer. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_3_Ninguno,NINGUNO : Último grado de estudios del productor dentro del sistema de enseñanza. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_3_Primaria,PRIMARIA : Último grado de estudios del productor dentro del sistema de enseñanza. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_3_Secundaria,SECUNDARIA : Último grado de estudios del productor dentro del sistema de enseñanza. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_3_Preparatoria,PREPARATORIA : Último grado de estudios del productor dentro del sistema de enseñanza. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_3_Profesional,PROFESIONAL : Último grado de estudios del productor dentro del sistema de enseñanza. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_3_Otro,OTRO : Último grado de estudios del productor dentro del sistema de enseñanza. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_2_Men_26_años,Productores menores de 26 años  : Son los hombres o mujeres que tiene la responsabilidad del manejo de la unidad de producción y una edad entre 18 y 25 años de edad. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_2_entre_26_45_años,Productores de 26 a 45 años  : Son los hombres o mujeres que tiene la responsabilidad del manejo de la unidad de producción y una edad entre 26 y 45 años de edad. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_2_entre_46_60_años,Productores de 46 a 60 años  : Son los hombres o mujeres que tiene la responsabilidad del manejo de la unidad de producción y una edad entre 46 y 60 años de edad. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_2_entre_61_75_años,Productores de 61 a 75 años  : Son los hombres o mujeres que tiene la responsabilidad del manejo de la unidad de producción y una edad entre 61 y 75 años de edad. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_2_entre_76_85_años,Productores de 76 a 85 años  : Son los hombres o mujeres que tiene la responsabilidad del manejo de la unidad de producción y una edad entre 76 y 85 años de edad. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+XII50_2_May_85_años,Productores  mayores a 85 años  : Son los hombres o mujeres que tiene la responsabilidad del manejo de la unidad de producción y una edad mayor a 85 años de edad. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+UP_XII_4_DEP_ECO,Con dependientes económicos : Son los hombres o mujeres que dependen económicamente del responsable de la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+UP_XII_4_DEP_ECO_HOMBRES,DEPENDIENTES_ECONOMICOS_DEL_PRODUCTOR_HOMBRES : Son los hombres que dependen económicamente del responsable de la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+UP_XII_4_DEP_ECO_MUJERES,DEPENDIENTES_ECONOMICOS_DEL_PRODUCTOR_MUJERES : Son las mujeres que dependen económicamente del responsable de la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+H_DEP_MEN,MENORES_DE_12_ANIOS_HOMBRES : Son los hombres menores de 12 años que dependen económicamente del responsable de la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+M_DEP_MEN,MENORES_DE_12_ANIOS_MUJERES : Son las mujeres menores de 12 años que dependen económicamente del responsable de la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+H_DEP_MAY,DE_12_AÑOS_Y_MAS_HOMBRES : Son los hombres mayores de 12 años que dependen económicamente del responsable de la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+M_DEP_MAY,DE_12_AÑOS_Y_MAS_MUJERES : Son las mujeres mayores de 12 años que dependen económicamente del responsable de la unidad de producción. Unidad de medida: Persona,float,10.2,0000000000.00-9999999999.99
+ESTATUS,"Descripción de estatus de los datos.El estatus de la información puede ser : Cifras Definitivas, Cifras Revisadas, Cifras Preliminares.",varchar,100,Cifras Definitivas

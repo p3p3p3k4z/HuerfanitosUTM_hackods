@@ -1,0 +1,9 @@
+﻿COLUMNA,DESCRIPCION,TIPO_DATO,LONGITUD,CODIGO_VALIDO
+TIPO_DE_DATO,Es la presentación de la información.,varchar,100,"Estimación,Existencias,Limite de confianza inferior,Limite de confianza superior,Coeficiente de variacion"
+ENTIDAD,Nombre de la  Entidad.,varchar,100,"Aguascalientes a Zacatecas,Nacional"
+IV27_1,Corrientes o criollos : Cerdo que no ha tenido un mejoramiento genético y sus características no corresponden a las de alguna raza definida. Unidad de medida: Cabezas,float,10.2,0000000000.00-9999999999.99
+IV27_2,Cruza de corrientes con finos : Cerdo obtenido del apareamiento o mediante inseminación artificial de una hembra corriente con otro de raza fina. Unidad de medida: Cabezas,float,10.2,0000000000.00-9999999999.99
+IV27_3,"Finos o razas especializadas : Cerdo, perteneciente a una raza definida, capaz de transmitir sus características a su descendencia. En este concepto se incluyen las cruzas entre animales de distintas razas puras. Unidad de medida: Cabezas",float,10.2,0000000000.00-9999999999.99
+IV27_3_1,"Animales de registro : Cerdo que posee pureza racial y cuenta con un certificado oficial, también llamado pedigrí, donde se garantiza su calidad genética, por ejemplo: la raza Landrace, Yorkshire, Duroc Jersey, entre otras. Unidad de medida: Cabezas",float,10.2,0000000000.00-9999999999.99
+IV27_NO_CLASIFICADOS,"Porcinos no clasificados : Marranos de los cuales solo se conoce su total de cabezas, sin definir edad, sexo o alguna otra característica sobre ellos. Unidad de medida: Cabezas",float,10.2,0000000000.00-9999999999.99
+ESTATUS,"Descripción de estatus de los datos.El estatus de la información puede ser : Cifras Definitivas, Cifras Revisadas, Cifras Preliminares.",varchar,100,Cifras Definitivas
