@@ -1,0 +1,5 @@
+﻿"Nota: Se presenta la cantidad acumulada por año de Áreas Naturales Protegidas que se se sobreponen en el Raster "Mountains of the World" (UNEP-WCMC) en un determinado año de acuerdo con la Información Goespacial de las Áreas Naturales Protegidas (CONANP, 2024). "
+"Fuente: - CONANP. 2024. Información Geoespacial de las Áreas Naturales Protegidas. [Fecha de consulta: junio de 2025]. Disponible en:  http://sig.conanp.gob.mx/website/pagsig/
+
+- UNEP, WCMC. 2000. Mountains of the World. Cambridge (UK): UNEP-WCMC.  [Fecha de consulta: junio de 2025]. Disponible en:   
+ https://resources.unep-wcmc.org/products/e6862c0331d04362ab7dc5bae983c5f6  "

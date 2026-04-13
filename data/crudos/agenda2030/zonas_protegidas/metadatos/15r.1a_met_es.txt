@@ -1,0 +1,56 @@
+﻿Title: 15r.1a Cobertura de las zonas terrestres protegidas en relación con el territorio terrestre
+
+Description: Corresponde al porcentaje de la superficie terrestre cubierta por Áreas Naturales Protegidas federales, respecto a la superficie terrestre nacional.
+
+Modified: 2025-05-21
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: contacto.ods@agenda2030.mx
+
+License:http://ods.inegi.org.mxdocs/doctos/system/terminos_uso_SIODS_es.pdf
+
+ContactPoint: César E. Rodríguez Ortega
+Director General de Planeación, Evaluación y Estadística Ambiental
+Avenida Ejército Nacional 223, Colonia Anáhuac, 11320; Miguel Hidalgo, Miguel Hidalgo, Ciudad de México
+55 5490 0983, ext. 10983
+cesar.rodriguez@semarnat.gob.mx
+
+Temporal: 1993-2024
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Anual
+
+Distribution:http://ods.inegi.org.mx/docs/files/csv/zip/15r.1a_es.zip
+
+Goal: 15. Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres, gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad 
+
+Target:  Meta 15.1 De aquí a 2020, asegurar la conservación, el restablecimiento y el uso sostenible de los ecosistemas terrestres y los ecosistemas interiores de agua dulce y sus servicios, en particular los bosques, los humedales, las montañas y las zonas áridas, en consonancia con las obligaciones contraídas en virtud de acuerdos internacionales
+
+Type of indicator: Regional
+
+Algorithm: 15r.1a_ES.gif
+
+Description of the indicator: El indicador se calcula dividiendo la superficie terrestre de las áreas naturales protegidas federales entre la superficie terrestre nacional, expresado en porcentaje.
+
+Unit of measure: Porcentaje
+
+Geographic coverage: Nacional
+
+Opportunity: 1 año
+
+Source of statistical information used to calculate the indicator: - Conanp. 2025. Listado de las Áreas Naturales Protegidas de México. [Fecha de consulta: mayo de 2025]. Consultado en: http://dgeiawf.semarnat.gob.mx:8080/ibi_apps/WFServlet?IBIF_ex=D3_BIODIV04_17&IBIC_user=dgeia_mce&IBIC_pass=dgeia_mce&NOMBREANIO=* 
+- INEGI. 2024. Marco Geoestadístico Nacional 2024. INEGI. México. [Fecha de consulta: mayo de 2025]. Consultado en:  https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=794551132173
+
+Date of next update of indicator: 30 de mayo de 2026
+
+Unit of the State responsible for calculating the indicator: Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)  
+
+Importance and purpose of the indicator: Los ODS establecieron como una de sus metas proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres. Las Áreas Naturales Protegidas (ANP) tienen como función principal la protección de la flora y fauna, de los servicios ambientales, de los recursos naturales de importancia especial y de los ecosistemas representativos de una región o país, por lo que el porcentaje de la superficie cubierta por ANPs refleja el esfuerzo gubernamental encaminado a salvaguardar la biodiversidad y los servicios ambientales que brindan los ecosistemas naturales.
+
+National and/or international reference: Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT). Comisión Nacional de Áreas Naturales Protegidas (CONANP). Página electrónica institucional. Disponible en: http://www.gob.mx/conanp 
+
+Observations: El indicador no mide la eficacia de las áreas protegidas para reducir la pérdida de biodiversidad, que depende de una serie de factores de manejo y de aplicación no contempladas en su estimación.
+Este indicador forma parte del Catálogo Nacional de Indicadores (CNI).
+

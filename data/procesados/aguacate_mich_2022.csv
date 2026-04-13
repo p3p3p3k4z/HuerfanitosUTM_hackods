@@ -1,0 +1,107 @@
+municipio,superficie_ha,produccion_ton,anio,cultivo
+,164877.1328,1712126.2712,2022,Aguacate
+001 Acuitzio,1283.3347,11326.198,2022,Aguacate
+002 Aguililla,32.0,205.9,2022,Aguacate
+003 Álvaro Obregón,30.42,338.2276,2022,Aguacate
+004 Angamacutiro,6.2448,50.92,2022,Aguacate
+005 Angangueo,34.0717,56.1616,2022,Aguacate
+006 Apatzingán,1752.5982,20458.8951,2022,Aguacate
+007 Aporo,37.1196,315.4179,2022,Aguacate
+008 Aquila,6.5,23.4,2022,Aguacate
+009 Ario,16249.0908,163713.6674,2022,Aguacate
+010 Arteaga,8.0,77.46,2022,Aguacate
+012 Buenavista,74.9478,711.9573,2022,Aguacate
+014 Coahuayana,5.2,58.65,2022,Aguacate
+015 Coalcomán de Vázquez Pallares,177.566,1776.0122,2022,Aguacate
+016 Coeneo,68.5857,656.5799,2022,Aguacate
+017 Contepec,14.1484,134.4499,2022,Aguacate
+018 Copándaro,7.27,80.284,2022,Aguacate
+019 Cotija,1896.8345,15703.2018,2022,Aguacate
+020 Cuitzeo,4.39,40.813,2022,Aguacate
+021 Charapan,370.993,1913.149,2022,Aguacate
+022 Charo,112.8734,906.1123,2022,Aguacate
+023 Chavinda,0.5001,5.8503,2022,Aguacate
+024 Cherán,7.75,46.785,2022,Aguacate
+025 Chilchota,368.4302,2794.8715,2022,Aguacate
+026 Chinicuila,32.0,220.0094,2022,Aguacate
+027 Chucándiro,8.5,90.42,2022,Aguacate
+028 Churintzio,1.0,0.0,2022,Aguacate
+029 Churumuco,5.0,44.5782,2022,Aguacate
+030 Ecuandureo,1.0,0.22,2022,Aguacate
+031 Epitacio Huerta,12.76,130.017,2022,Aguacate
+032 Erongarícuaro,248.496,1668.9657,2022,Aguacate
+033 Gabriel Zamora,12.0,127.08,2022,Aguacate
+034 Hidalgo,249.476,1684.3254,2022,Aguacate
+035 La Huacana,43.25,341.1,2022,Aguacate
+036 Huandacareo,2.7283,6.3361,2022,Aguacate
+037 Huaniqueo,0.775,5.89,2022,Aguacate
+039 Huiramba,257.2571,1723.4028,2022,Aguacate
+040 Indaparapeo,16.1099,164.8008,2022,Aguacate
+041 Irimbo,12.3775,83.6699,2022,Aguacate
+042 Ixtlán,0.2,0.03,2022,Aguacate
+043 Jacona,43.24,409.3416,2022,Aguacate
+044 Jiménez,363.3553,2349.9682,2022,Aguacate
+045 Jiquilpan,40.313,369.7295,2022,Aguacate
+046 Juárez,237.2286,2198.9429,2022,Aguacate
+047 Jungapeo,92.6911,706.9862,2022,Aguacate
+048 Lagunillas,64.1,691.774,2022,Aguacate
+049 Madero,1240.7266,11938.764,2022,Aguacate
+050 Maravatío,59.5214,486.3067,2022,Aguacate
+051 Marcos Castellanos,66.0016,724.4152,2022,Aguacate
+052 Lázaro Cárdenas,1.725,1.07,2022,Aguacate
+053 Morelia,926.4629,8746.1031,2022,Aguacate
+054 Morelos,28.8345,113.354,2022,Aguacate
+056 Nahuatzen,298.4939,2045.5002,2022,Aguacate
+057 Nocupétaro,2.0,11.59,2022,Aguacate
+058 Nuevo Parangaricutiro,7224.2461,73660.5884,2022,Aguacate
+059 Nuevo Urecho,244.5755,2860.3633,2022,Aguacate
+060 Numarán,1.5,17.55,2022,Aguacate
+061 Ocampo,220.7631,1164.4639,2022,Aguacate
+062 Pajacuarán,13.313,30.6108,2022,Aguacate
+063 Panindícuaro,135.9616,1238.4129,2022,Aguacate
+064 Parácuaro,263.0979,2060.491,2022,Aguacate
+065 Paracho,17.5128,96.9925,2022,Aguacate
+066 Pátzcuaro,1664.8453,17045.5628,2022,Aguacate
+067 Penjamillo,7.525,0.0,2022,Aguacate
+068 Peribán,10163.2006,118847.1495,2022,Aguacate
+069 La Piedad,0.5,0.05,2022,Aguacate
+070 Purépero,555.0636,4606.7846,2022,Aguacate
+071 Puruándiro,26.06,250.5545,2022,Aguacate
+072 Queréndaro,96.7901,838.6028,2022,Aguacate
+073 Quiroga,102.2671,928.2442,2022,Aguacate
+074 Cojumatlán de Régules,9.12,46.904,2022,Aguacate
+075 Los Reyes,8303.2798,87360.8758,2022,Aguacate
+076 Sahuayo,6.1725,40.7926,2022,Aguacate
+077 San Lucas,88.902,939.1212,2022,Aguacate
+078 Santa Ana Maya,0.0166,0.2,2022,Aguacate
+079 Salvador Escalante,16914.6147,170397.5214,2022,Aguacate
+080 Senguio,18.1044,193.3672,2022,Aguacate
+081 Susupuato,504.3247,4393.1354,2022,Aguacate
+082 Tacámbaro,16427.4542,176944.1712,2022,Aguacate
+083 Tancítaro,24818.4886,279491.0474,2022,Aguacate
+084 Tangamandapio,2045.0041,18185.5339,2022,Aguacate
+085 Tangancícuaro,1811.4458,15368.2083,2022,Aguacate
+086 Tanhuato,2.0,23.4,2022,Aguacate
+087 Taretan,350.0393,3804.3934,2022,Aguacate
+088 Tarímbaro,0.702,0.7,2022,Aguacate
+089 Tepalcatepec,0.24,1.5477,2022,Aguacate
+090 Tingambato,4640.1884,46801.5234,2022,Aguacate
+091 Tingüindín,4542.2403,48544.0186,2022,Aguacate
+093 Tlalpujahua,8.7202,13.9392,2022,Aguacate
+094 Tlazazalca,24.81,251.284,2022,Aguacate
+095 Tocumbo,1763.606,18883.285,2022,Aguacate
+096 Tumbiscatío,6.16,63.372,2022,Aguacate
+097 Turicato,4039.1742,42490.6538,2022,Aguacate
+098 Tuxpan,971.751,8891.0459,2022,Aguacate
+099 Tuzantla,4.0,42.36,2022,Aguacate
+100 Tzintzuntzan,82.8331,482.9223,2022,Aguacate
+101 Tzitzio,9.9847,85.808,2022,Aguacate
+102 Uruapan,19251.0891,210257.3464,2022,Aguacate
+103 Venustiano Carranza,32.0733,340.7227,2022,Aguacate
+104 Villamar,19.05,2.0,2022,Aguacate
+107 Zacapu,2397.3588,22823.8952,2022,Aguacate
+108 Zamora,2.4889,29.1183,2022,Aguacate
+110 Zinapécuaro,217.5519,1509.8566,2022,Aguacate
+111 Ziracuaretiro,4792.2317,50324.0099,2022,Aguacate
+112 Zitácuaro,3117.4482,20967.6895,2022,Aguacate
+113 José Sixto Verduzco,0.75,4.425,2022,Aguacate

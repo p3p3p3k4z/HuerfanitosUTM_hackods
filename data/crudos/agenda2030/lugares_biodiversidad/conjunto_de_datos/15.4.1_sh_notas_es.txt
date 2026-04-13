@@ -1,0 +1,20 @@
+﻿"Nota: 1) El porcentaje presentado se calculó tomando en cuenta la suma acumulada de la superficie de los instrumentos dentro de ANP evitando duplicidad en cada año, con respecto
+a la superficie total de montaña de los tres instrumentos a nivel nacional y finalmente el resultado de la división se multiplicó por 100. 
+ 2) Para los años de 1999 a 2006 el indicador sólo considera las AICA presentes en el país, esta es la razón por la que el indicador presenta una disminución marcada
+en el porcentaje a partir del año 2007. "
+"Fuente: -Conabio-Conanp-TNC-Pronatura-FCF, UANL. 2007. Análisis de vacíos y omisiones en conservación de la biodiversidad terrestre de México: espacios y especies. Comisión
+Nacional para el Conocimiento y Uso de la Biodiversidad, Comisión Nacional de Áreas Naturales Protegidas, The Nature Conservancy Programa México, Pronatura, A.C., Facultad
+de Ciencias Forestales, Universidad Autónoma de Nuevo León, México. [Fecha de consulta: junio de 2025]. Disponible en:   
+ https://simec.conanp.gob.mx/pdf_evaluacion/terrestre.pdf   
+-Conabio. 1999. Áreas de importancia para la conservación de las aves, 1999. [Fecha de consulta: junio
+de 2025]. Disponible en:  http://geoportal.conabio.gob.mx/metadatos/doc/html/aica250kgw.html
+-Conabio. 2015. Áreas de importancia para la conservación de las aves,
+2015. [Fecha de consulta: junio de 2025]. Disponible en:  http://geoportal.conabio.gob.mx/metadatos/doc/html/aicas15gw.html
+-CONANP. 2024. Información Geoespacial
+de las Áreas Naturales Protegidas. [Fecha de consulta: junio de 2025]. Disponible en:  http://sig.conanp.gob.mx/website/pagsig/  
+-Key Biodiversity Areas GIS Data.
+[Fecha de consulta: junio de 2025]. Disponible en:   
+ https://www.keybiodiversityareas.org/kba-data/request  
+-UNEP, WCMC. 2000. Mountains of the World. Cambridge (UK): UNEP-WCMC. [Fecha de consulta: junio de 2025]. Disponible
+en:   
+ https://resources.unep-wcmc.org/products/e6862c0331d04362ab7dc5bae983c5f6  "

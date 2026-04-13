@@ -1,0 +1,58 @@
+﻿Title: 15n.1.1 Porcentaje de ANP terrestres que incrementan o mantienen su superficie con cobertura vegetal, o que presentan pérdidas menores al 5%
+
+Description: Es el porcentaje de Áreas Naturales Protegidas que, de acuerdo al estudio sobre las Tasas de Transformación del Hábitat (TTH) en las Áreas Naturales Protegidas de México de régimen federal entre los años 2015-2020, mantienen su cobertura vegetal o que presentan pérdidas menores al 5%
+
+Modified: 2023-10-10
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: contacto.ods@agenda2030.mx
+
+License:http://ods.inegi.org.mxdocs/doctos/system/terminos_uso_SIODS_es.pdf
+
+ContactPoint: Dr. César Edgardo Rodríguez Ortega
+Director General de Planeación, Evaluación y Estadística Ambiental
+Avenida Ejército Nacional 223
+(55) 5490 0983, ext. 10983
+cesar.rodriguez@semarnat.gob.mx
+
+Temporal: 2021-2021
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Anual
+
+Distribution:http://ods.inegi.org.mx/docs/files/csv/zip/15n.1.1_es.zip
+
+Goal: 15. Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres, gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad 
+
+Target:  Meta 15n.1 Reducir la pérdida y degradación de los hábitats naturales, promover su recuperación y proteger las especies en alguna categoría de riesgo para evitar su extinción
+
+Type of indicator: Nacional
+
+Algorithm: 15n.1.1_ES.gif
+
+Description of the indicator: De acuerdo con el Análisis de la Tasa de Transformación del Hábitat en Áreas Naturales Protegidas Federales (EOSS, 2021) se seleccionaron las ANP que cumplen con el criterio de incrementar  o mantener su superficie con cobertura vegetal, o que presentan pérdidas menores al 5%. Posteriormente se dividió entre el numero total de ANP decretadas de carácter federal consideradas en el análisis y se multiplicó por 100.
+
+Unit of measure: Porcentaje
+
+Geographic coverage: Nacional
+
+Opportunity: 1 año
+
+Source of statistical information used to calculate the indicator: Comisión Nacional de Áreas Naturales Protegidas (CONANP). Información Geoespacial de las Áreas Naturales Protegidas. Consultado en:  http://sig.conanp.gob.mx/website/pagsig/iin.htm  . Fecha de consulta: octubre de 2023.
+Gebhardt, S. y T. Wehrmann, 2021. Análisis de la Tasa de Transformación del Hábitat en Áreas Naturales Protegidas Federales Contrato NO. O-17-5-20-0177. Fondo Mexicano para la Conservación de la Naturaleza, A.C. y Earth Observation Solutions and Services (EOSS) GMBH. Consultado en: https://simec.conanp.gob.mx/pdf_evaluacion/Análisis%20TTH%20_ANP%20federales_2021_FMCN.pdf Fecha de consulta: octubre de 2023.
+
+Date of next update of indicator: 31 de diciembre de 2026
+
+Unit of the State responsible for calculating the indicator: Comisión Nacional de Áreas Naturales Protegidas (CONANP).  
+ https://www.gob.mx/conanp 
+
+Importance and purpose of the indicator: Los ODS establecieron como una de sus metas proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres. Las Áreas Naturales Protegidas (ANP) tienen como función principal la protección de la flora y fauna, de los servicios ambientales, de los recursos naturales de importancia especial y de los ecosistemas representativos de una región o país, por lo que el porcentaje de la superficie cubierta por ANPs refleja el esfuerzo gubernamental encaminado a salvaguardar la biodiversidad y los servicios ambientales que brindan los ecosistemas naturales.
+
+National and/or international reference: Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT). Comisión Nacional de Áreas Naturales Protegidas (CONANP).  
+ https://www.gob.mx/conanp 
+
+Observations: La Ley General del Equilibrio Ecológico y la Protección al Ambiente de México, define a las Áreas Naturales Protegidas como aquellas que constituyen porciones terrestres o acuáticas del territorio nacional, representativas de los diferentes ecosistemas y de su biodiversidad, en donde el ambiente original no ha sido esencialmente alterado por el hombre y están sujetas a regímenes especiales de protección, conservación, restauración y desarrollo. 
+El indicador sólo considera el número de ANP federales terrestres y costero- marinas.
+

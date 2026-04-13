@@ -1,0 +1,12 @@
+﻿"Nota: 1) El porcentaje de protección se estimó con base en 196 437 500 hectáreas que incluye la superficie continental, insular y los cuerpos de agua del país. 
+ 2) El número y la superficie de ANP federales en un año particular pueden diferir de las reportadas por la Conanp debido a que se calculan para el indicador con base
+en el año de decreto de creación. 
+ 3) La fuente actualizó la información, por lo que hay ajustes en las cifras para varios años. 
+ 4) Se incluyen todas las ANP decretadas, la más reciente del año 2023, y una revisión de la fuente que modifica las superficies de dos ANP (APFF Médanos de Samalayuca
+y PN Gogorrón) como resultado de juicios de amparo que disminuyeron sus superficies con respecto las establecidas en sus correspondientes decretos de creación (Conanp,
+2023). La superficie que se presenta fue estimada por la CONANP con base en la descripción limítrofe incluida en el correspondiente decreto de creación de cada
+ANP. La superficie calculada terrestre puede incluir cuerpos de aguas continentales. "
+"Fuente: CONANP. Información Geoespacial de las Áreas Naturales Protegidas 2023. Consultado en:  http://sig.conanp.gob.mx/website/pagsig/info_shape.htm  Fecha de consulta: mayo
+de 2024.
+INEGI. Marco Geoestadístico Nacional 2023. Consultado en:   
+ https://www.inegi.org.mx/temas/mg/  "

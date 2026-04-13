@@ -1,0 +1,24 @@
+﻿"Nota: 1) Los datos de la columna "Sumatoria de Superficie de Instrumentos (KBA, AICAS, GAP Terrestre) dentro de ANP en zonas de montaña" corresponden a la suma acumulada de
+las superficies de cada instrumento en un determinado año. 
+ 2) En el caso de las KBA se han anotado las superficies calculadas en el Sistema de Información Geografica ArcGIS 10.8 que se encuentran dentro de ANP pero fuera de
+AICA y GAP Terrestre; de acuerdo con su base de datos, a partir de 2009.  
+ 3) En el caso de las AICA, se calcularon las superficies que se encuentran dentro de ANP pero fuera de KBA y GAP Terrestre, evitando la duplicidad de superficies, estos
+datos tienen una cobertura temporal a partir del año de su publicación, en 1999.  
+ 4) En el caso del GAP Terrestre, resultado del Análisis de vacíos y omisiones en conservación de la biodiversidad terrestre de México, se calcularon las superficies
+que se encuentran dentro de ANP pero fuera de AICA y KBA, con una cobertura temporal a partir de su publicación en 2007. "
+"Fuente: -Conabio-Conanp-TNC-Pronatura-FCF, UANL. 2007. Análisis de vacíos y omisiones en conservación de la biodiversidad terrestre de México: espacios y especies. Comisión
+Nacional para el Conocimiento y Uso de la Biodiversidad, Comisión Nacional de Áreas Naturales Protegidas, The Nature Conservancy Programa México, Pronatura, A.C., Facultad
+de Ciencias Forestales, Universidad Autónoma de Nuevo León, México. [Fecha de consulta: junio de 2025]. Disponible en:   
+ https://simec.conanp.gob.mx/pdf_evaluacion/terrestre.pdf   
+-Conabio. 1999. Áreas de importancia para la conservación de las aves, 1999. [Fecha de consulta: junio
+de 2025]. Disponible en:  http://geoportal.conabio.gob.mx/metadatos/doc/html/aica250kgw.html
+-Conabio. 2015. Áreas de importancia para la conservación de las aves,
+2015. [Fecha de consulta: junio de 2025]. Disponible en:  http://geoportal.conabio.gob.mx/metadatos/doc/html/aicas15gw.html
+-CONANP. 2024. Información Geoespacial
+de las Áreas Naturales Protegidas. [Fecha de consulta: junio de 2025]. Disponible en:  http://sig.conanp.gob.mx/website/pagsig/  
+-Key Biodiversity Areas GIS Data.
+[Fecha de consulta: junio de 2025]. Disponible en:   
+ https://www.keybiodiversityareas.org/kba-data/request  
+-UNEP, WCMC. 2000. Mountains of the World. Cambridge (UK): UNEP-WCMC. [Fecha de consulta: junio de 2025]. Disponible
+en:   
+ https://resources.unep-wcmc.org/products/e6862c0331d04362ab7dc5bae983c5f6  "

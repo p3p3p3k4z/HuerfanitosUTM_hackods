@@ -1,0 +1,72 @@
+﻿Title: 15.4.1 Lugares importantes para la biodiversidad de las montañas incluidos en zonas protegidas
+
+Description: El indicador Cobertura por áreas protegidas de sitios importantes para la biodiversidad de montaña muestra las tendencias en el porcentaje medio de cada sitio importante para la biodiversidad de montaña (es decir, aquellos que contribuyen significativamente a la persistencia global de la biodiversidad, para el caso de México: Áreas de importancia para la conservación de las aves (AICA), Análisis de vacíos y omisiones en conservación de la biodiversidad terrestre de México: espacios y especies (GAP Terrestre) y las Áreas Clave para la Biodiversidad (Key Biodiversity Areas, KBA) que está cubierto por áreas protegidas designadas áreas y otras medidas efectivas de conservación basadas en áreas (OECM).
+
+Modified: 2025-06-20
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: contacto.ods@agenda2030.mx
+
+License:http://ods.inegi.org.mxdocs/doctos/system/terminos_uso_SIODS_es.pdf
+
+ContactPoint: Dr. César Edgardo Rodríguez Ortega
+Director General de Planeación, Evaluación y Estadística Ambiental
+Avenida Ejército Nacional 223, Colonia Anáhuac, 11320, Alcaldía Miguel Hidalgo, Ciudad de México
+(55) 5490 0983, ext. 10983
+cesar.rodriguez@semarnat.gob.mx
+
+Temporal: 1999-2024
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Anual
+
+Distribution:http://ods.inegi.org.mx/docs/files/csv/zip/15.4.1_es.zip
+
+Goal: 15. Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres, gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad 
+
+Target:  Meta 15.4. De aquí a 2030, asegurar la conservación de los ecosistemas montañosos, incluida su diversidad biológica, a fin de mejorar su capacidad de proporcionar beneficios esenciales para el desarrollo sostenible
+
+Type of indicator: Global
+
+Algorithm: 15.4.1_ES.gif
+
+Description of the indicator: Este indicador se calcula a partir de los datos derivados de una superposición espacial entre polígonos digitales de la Información Geoespacial de las Áreas Naturales Protegidas (CONANP, 2024), polígonos digitales para Áreas Clave de Biodiversidad de montaña (Áreas Clave de Biodiversidad (KBA), las Áreas de importancia para la conservación de las aves (AICA), el Análisis de vacíos y omisiones en conservación de la biodiversidad terrestre de México: espacios y especies (GAP Terrestre). Con los lugares importantes para la biodiversidad de las montaña se hizo una sobreposicióncon la capa ráster de montaña (UNEP-WCMC, 2002).
+El valor del indicador en un momento dado, está basado en datos del año de establecimiento del área protegida registrado en la Base de Datos de la Información Geoespacial de las Áreas Naturales Protegidas. Se calcula como el porcentaje medio de la suma de las superficies de los tres instrumentos (AICA, GAP Terrestre y KBA) evitando duplicidad que está cubierta por áreas protegidas.
+
+Unit of measure: Porcentaje
+
+Geographic coverage: Nacional
+
+Opportunity: Seis meses
+
+Source of statistical information used to calculate the indicator: -Conabio-Conanp-TNC-Pronatura-FCF, UANL. 2007. Análisis de vacíos y omisiones en conservación de la biodiversidad terrestre de México: espacios y especies. Comisión Nacional para el Conocimiento y Uso de la Biodiversidad, Comisión Nacional de Áreas Naturales Protegidas, The Nature Conservancy Programa México, Pronatura, A.C., Facultad de Ciencias Forestales, Universidad Autónoma de Nuevo León, México. [Fecha de consulta: junio de 2025]. Disponible en:  https://simec.conanp.gob.mx/pdf_evaluacion/terrestre.pdf   
+-Conabio. 1999. Áreas de importancia para la conservación de las aves, 1999. [Fecha de consulta: junio de 2025]. Disponible en:  http://geoportal.conabio.gob.mx/metadatos/doc/html/aica250kgw.html
+-Conabio. 2015. Áreas de importancia para la conservación de las aves, 2015. [Fecha de consulta: junio de 2025]. Disponible en:  http://geoportal.conabio.gob.mx/metadatos/doc/html/aicas15gw.html
+-CONANP. 2024. Información Geoespacial de las Áreas Naturales Protegidas. [Fecha de consulta: junio de 2025]. Disponible en:  http://sig.conanp.gob.mx/website/pagsig/  
+-Key Biodiversity Areas GIS Data. [Fecha de consulta: junio de 2025]. Disponible en:  https://www.keybiodiversityareas.org/kba-data/request  
+-UNEP, WCMC. 2000. Mountains of the World. Cambridge (UK): UNEP-WCMC. [Fecha de consulta: junio de 2025]. Disponible en:  https://resources.unep-wcmc.org/products/e6862c0331d04362ab7dc5bae983c5f6
+
+Date of next update of indicator: 30 de junio de 2026
+
+Unit of the State responsible for calculating the indicator: Comisión Nacional de Áreas Naturales Protegidas (CONANP).  
+ https://www.gob.mx/conanp 
+
+Importance and purpose of the indicator: Los ODS establecieron como una de sus metas proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres. Las Áreas Naturales Protegidas (ANP) tienen como función principal la protección de la flora y fauna, de los servicios ambientales, de los recursos naturales de importancia especial y de los ecosistemas representativos de una región o país, por lo que el porcentaje de la superficie cubierta por ANP refleja el esfuerzo gubernamental encaminado a salvaguardar la biodiversidad y los servicios ambientales que brindan los ecosistemas naturales.
+
+National and/or international reference: SDG Indicators, Metadata repository. Indicator 15.4.1: Coverage by protected areas of important sites for mountain biodiversity. [Fecha de consulta: junio de 2025]. Disponible en:  
+ https://unstats.un.org/sdgs/metadata/  
+
+Observations: Para proveer un contexto global a la discusión de biodiversidad de montaña es necesario definir las localidades y tipos de ecosistemas de montaña, esto requiere a su vez la definición de montaña o sitios de montaña. La altitud, la pendiente y los gradientes ambientales que se generan en las montañas son parte clave para su correcta definición, sin embargo se complica combinar estos componentes. Los umbrales de altitud simple dejan de lado a los sistemas montañosos más antiguos y bajos e incluyen áreas con elevación relativamente alta que tienen poco relieve topográfico y pocos gradientes ambientales. Este modelo propone el uso de la pendiente en combinación con la altitud para determinar sitios de montaña a nivel mundial. Se presentan en un archivo tipo ráster con valores de altitud y pendientes asi como una clasificación de los sistemas montañosos. "Mountains of the World" (UNEP-WCMC). 
+La UNEP-WCMC cataloga las zonas de montaña en siete clases definiéndolas de la siguiente manera:
+-Clase 1: Elevación 1000-1500m y pendiente &#8805;5o
+-Clase 2: Elevación 1000-1500m y pendiente &#8805;5o o rango de elevación local >300
+-Clase 3: Elevación 1500-2500m y pendiente &#8805;2o
+-Clase 4: Elevación 2500-3500m
+-Clase 5: Elevación 300-1000m y rango de elevación local >300
+-Clase 6: Elevación 3500-4500m
+-Clase 7: Elevación &#8805; 4500m
+Para el caso de México las siete clases están representadas tanto en las ANP, KBA, AICA y GAP Terrestre de zonas de montaña.
+La temporalidad de los instrumentos es distinta: para AICA es a partir de 1999; para KBA a partir de 2009; y para GAP Terrestre a partir de 2007.
+

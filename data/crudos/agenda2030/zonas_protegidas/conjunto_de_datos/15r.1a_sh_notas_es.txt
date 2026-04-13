@@ -1,0 +1,12 @@
+﻿"Nota: 1) La fuente realizó ajustes a la serie histórica de la superficie cubierta por áreas naturales protegidas federales terrestres, por lo que las cifras no coinciden con
+las anteriormente reportadas a esta actualización. Se incluyen todas las ANP decretadas hasta el 30 de septiembre de 2024. 
+ 2) La superficie terrestre que se presenta en cada año fue estimada por la Conanp con base en la descripción limítrofe reportada en el decreto de las ANP. La superficie
+calculada terrestre puede incluir cuerpos de aguas continentales. 
+ 3) El porcentaje de protección se estimó respecto a una superficie de 196 437 500 hectáreas; que incluye la superficie continental, insular y los cuerpos de agua continentales
+del país. "
+"Fuente: - Conanp. 2025. Listado de las Áreas Naturales Protegidas de México. [Fecha de consulta: mayo de 2025]. Consultado en: http://dgeiawf.semarnat.gob.mx:8080/ibi_apps/WFServlet?IBIF_ex=D3_BIODIV04_17&IBIC_user=dgeia_mce&IBIC_pass=dgeia_mce&NOMBREANIO=*
+
+
+- INEGI. 2024. Marco Geoestadístico Nacional 2024. INEGI. México. [Fecha de
+consulta: mayo de 2025]. Consultado en:   
+ https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=794551132173  "

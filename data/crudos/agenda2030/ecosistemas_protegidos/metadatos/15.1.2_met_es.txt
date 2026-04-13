@@ -1,0 +1,59 @@
+﻿Title: 15.1.2 Proporción de lugares importantes para la diversidad biológica terrestre y del agua dulce que forman parte de zonas protegidas, desglosada por tipo de ecosistema
+
+Description: Corresponde al porcentaje de la superficie terrestre cubierta por Áreas Naturales Protegidas federales, respecto a la superficie terrestre nacional.
+
+Modified: 2024-05-31
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: contacto.ods@agenda2030.mx
+
+License:http://ods.inegi.org.mxdocs/doctos/system/terminos_uso_SIODS_es.pdf
+
+Keyword: Bosques, selvas, territorio nacional, reservorios de la biodiversidad, ecosistemas forestales
+
+ContactPoint: Dr. César Edgardo Rodríguez Ortega
+Director General de Planeación, Evaluación y Estadística Ambiental
+Avenida Ejército Nacional 223
+(55) 5490 0983, ext. 10983
+cesar.rodriguez@semarnat.gob.mx
+
+Temporal: 1993-2023
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Anual
+
+Distribution:http://ods.inegi.org.mx/docs/files/csv/zip/15.1.2_es.zip
+
+Goal: 15. Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres, gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad 
+
+Target:  Meta 15.1 De aquí a 2020, asegurar la conservación, el restablecimiento y el uso sostenible de los ecosistemas terrestres y los ecosistemas interiores de agua dulce y sus servicios, en particular los bosques, los humedales, las montañas y las zonas áridas, en consonancia con las obligaciones contraídas en virtud de acuerdos internacionales
+
+Type of indicator: Global
+
+Algorithm: 15_1_2_ES.gif
+
+Description of the indicator: El indicador se calcula dividiendo la superficie terrestre de las áreas naturales protegidas federales entre la superficie terrestre nacional, expresado en porcentaje.
+
+Unit of measure: Porcentaje
+
+Geographic coverage: Nacional
+
+Opportunity: 1 año
+
+Source of statistical information used to calculate the indicator: CONANP. Información Geoespacial de las Áreas Naturales Protegidas 2023. Consultado en:  http://sig.conanp.gob.mx/website/pagsig/info_shape.htm  Fecha de consulta: mayo de 2024.
+INEGI. Marco Geoestadístico Nacional 2023. Consultado en:  https://www.inegi.org.mx/temas/mg/
+
+Date of next update of indicator: No definida
+
+Unit of the State responsible for calculating the indicator: Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT). 
+
+Importance and purpose of the indicator: Los ODS establecieron como una de sus metas proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres. Las Áreas Naturales Protegidas (ANP) tienen como función principal la protección de la flora y fauna, de los servicios ambientales, de los recursos naturales de importancia especial y de los ecosistemas representativos de una región o país, por lo que el porcentaje de la superficie cubierta por ANPs refleja el esfuerzo gubernamental encaminado a salvaguardar la biodiversidad y los servicios ambientales que brindan los ecosistemas naturales.
+
+National and/or international reference: Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT). Comisión Nacional de Áreas Naturales Protegidas (CONANP). Página electrónica institucional. Disponible en: http://www.gob.mx/conanp 
+
+Observations: La superficie terrestre nacional utilizada para el cálculo del indicador es de 196 437 500 hectáreas, que incluyen la superficie continental, insular y los cuerpos de agua del país.
+El indicador no mide la eficacia de las áreas protegidas para reducir la pérdida de biodiversidad, que depende de una serie de factores de manejo y de aplicación fuera del alcance del indicador.
+Se incluyen todas las ANP decretadas, la más reciente del año 2023, y una revisión de la fuente que modifica las superficies de dos ANP (APFF Médanos de Samalayuca y PN Gogorrón) como resultado de juicios de amparo que disminuyeron sus superficies con respecto las establecidas en sus correspondientes decretos de creación (Conanp, 2023). La superficie que se presenta fue estimada por la CONANP con base en la descripción limítrofe incluida en el correspondiente decreto de creación de cada ANP. La superficie calculada terrestre puede incluir cuerpos de aguas continentales.
+

@@ -1,0 +1,7 @@
+﻿"Nota: El cálculo se llevó a cabo a partir de los datos oficiales de la Comisión Nacional de Áreas Naturales Protegidas. "
+"Fuente: -Comisión Nacional de Áreas Naturales Protegidas (CONANP). Información Geoespacial de las Áreas Naturales Protegidas. Consultado en: http://sig.conanp.gob.mx/website/pagsig/iin.htm
+ Fecha de consulta: octubre de 2023. 
+-Gebhardt, S. y T. Wehrmann, 2021. Análisis de la Tasa de Transformación del Hábitat en Áreas Naturales Protegidas
+Federales Contrato NO. O-17-5-20-0177. Fondo Mexicano para la Conservación de la Naturaleza, A.C. y Earth Observation Solutions and Services (EOSS) GMBH. Consultado
+en:  
+ https://simec.conanp.gob.mx/pdf_evaluacion/An%C3%A1lisis%20TTH%20_ANP%20federales_2021_FMCN.pdf  Fecha de consulta: octubre de 2023. "

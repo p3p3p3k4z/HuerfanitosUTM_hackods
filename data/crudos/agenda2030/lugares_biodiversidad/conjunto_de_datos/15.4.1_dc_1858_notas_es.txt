@@ -1,0 +1,18 @@
+﻿"Nota: Se presenta la suma de las superficies de los tres instrumentos que se sobreponen en el Raster "Mountains of the World" (UNEP-WCMC) en un determinado año evitando la
+duplicidad de superficies. "
+"Fuente: -Conabio-Conanp-TNC-Pronatura-FCF, UANL. 2007. Análisis de vacíos y omisiones en conservación de la biodiversidad terrestre de México: espacios y especies. Comisión
+Nacional para el Conocimiento y Uso de la Biodiversidad, Comisión Nacional de Áreas Naturales Protegidas, The Nature Conservancy Programa México, Pronatura, A.C., Facultad
+de Ciencias Forestales, Universidad Autónoma de Nuevo León, México. [Fecha de consulta: junio de 2025]. Disponible en:   
+ https://simec.conanp.gob.mx/pdf_evaluacion/terrestre.pdf   
+-Conabio. 1999. Áreas de importancia para la conservación de las aves, 1999. [Fecha de consulta: junio
+de 2025]. Disponible en:  http://geoportal.conabio.gob.mx/metadatos/doc/html/aica250kgw.html
+-Conabio. 2015. Áreas de importancia para la conservación de las aves,
+2015. [Fecha de consulta: junio de 2025]. Disponible en:  http://geoportal.conabio.gob.mx/metadatos/doc/html/aicas15gw.html
+-CONANP. 2024. Información Geoespacial
+de las Áreas Naturales Protegidas. [Fecha de consulta: junio de 2025]. Disponible en:  http://sig.conanp.gob.mx/website/pagsig/  
+-Key Biodiversity Areas GIS Data.
+[Fecha de consulta: junio de 2025]. Disponible en:   
+ https://www.keybiodiversityareas.org/kba-data/request  
+-UNEP, WCMC. 2000. Mountains of the World. Cambridge (UK): UNEP-WCMC. [Fecha de consulta: junio de 2025]. Disponible
+en:   
+ https://resources.unep-wcmc.org/products/e6862c0331d04362ab7dc5bae983c5f6  "

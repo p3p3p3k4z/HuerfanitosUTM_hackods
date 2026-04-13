@@ -5,9 +5,18 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "ipywidgets>=8.1.8",
+    "jinja2>=3.1.6",
     "jupyter>=1.1.1",
+    "lxml>=6.0.4",
     "matplotlib>=3.10.8",
     "notebook>=7.5.5",
+    "openpyxl>=3.1.5",
     "pandas>=3.0.2",
     "plotly>=6.7.0",
+    "pyyaml>=6.0.3",
+    "scipy>=1.17.1",
+    "seaborn>=0.13.2",
+    "xlrd>=2.0.2",
 ]

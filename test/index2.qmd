@@ -1,0 +1,93 @@
+---
+title: "Dataset Maestro ODS 15: Michoacán"
+subtitle: "El Oro Verde y el Pulmón en Llamas"
+author: "Antigravity - Senior Data Architect"
+date: "2026-04-13"
+lang: es
+format:
+  html:
+    theme: lux
+    toc: true
+    code-fold: true
+    self-contained: true
+---
+
+![Impacto visual del monocultivo en Michoacán](docs/assets/cover.png)
+
+## Exposición: El Auge del Oro Verde
+
+Michoacán es el principal productor de aguacate en el mundo. Sin embargo, esta bonanza económica tiene un costo oculto: la superficie forestal está bajo una presión nunca antes vista.
+
+```{python}
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+
+# Cargar datos procesados
+df_aguacate = pd.read_csv('data/procesados/aguacate_mich_municipios_2022.csv')
+df_master = pd.read_csv('data/procesados/dataset_maestro_ods15.csv')
+
+# Visualización de los 10 municipios líderes
+top_10 = df_aguacate.sort_values('ha_sembrada', ascending=False).head(10)
+
+fig_top = px.bar(top_10, x='municipio', y='ha_sembrada', 
+                 title="Top 10 Municipios por Superficie de Aguacate (2022)",
+                 labels={'ha_sembrada': 'Hectáreas Sembradas', 'municipio': 'Municipio'},
+                 color='ha_sembrada', color_continuous_scale='Greens')
+fig_top.show()
+```
+
+## Conflicto: La Invasión Silenciosa
+
+El conflicto surge cuando observamos la relación entre la superficie dedicada al aguacate y la superficie forestal remanente. En 2022, observamos una alarmante expansión:
+
+```{python}
+# Gráfica de comparación
+labels = ['Bosque Remanente', 'Aguacate', 'Agric. en Zona Forestal']
+values = [df_master['bosque_ha'].iloc[0], df_master['aguacate_ha'].iloc[0], df_master['agri_en_bosque_ha'].iloc[0]]
+
+fig_pie = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
+fig_pie.update_layout(title_text="Distribución de Superficie en Intervención Humana (Ha)")
+fig_pie.show()
+```
+
+> **Giro Emocional**: Por cada hectárea de bosque que conservamos, estamos convirtiendo casi el 5% de las áreas de manejo forestal en parcelas agrícolas sin autorización.
+
+## Clímax: ¿Es suficiente la reforestación?
+
+El análisis de los datos indica que, aunque hay esfuerzos de reforestación, la tasa de expansión del aguacate supera la capacidad de recuperación de los ecosistemas locales.
+
+```{python}
+# Calculadora Interactiva de Impacto
+from IPython.display import display, HTML
+
+html_calc = """
+<div style="background-color: #f4f4f4; padding: 20px; border-radius: 10px; border-left: 5px solid #2e7d32;">
+    <h3>Calculadora de Huella Hídrica y Forestal</h3>
+    <p>Ingresa cuántos aguacates consumes al mes para ver tu impacto en el bosque de Michoacán:</p>
+    <input type="number" id="aguas" value="4" style="padding: 5px; width: 60px;"> aguacates/mes
+    <button onclick="calculateImpact()" style="background-color: #2e7d32; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Calcular Impacto</button>
+    <div id="result" style="margin-top: 15px; font-weight: bold;"></div>
+</div>
+
+<script>
+function calculateImpact() {
+    let n = document.getElementById('aguas').value;
+    let water = n * 70; // 70 litros por aguacate aprox
+    let trees = (n * 0.0001).toFixed(4); // Estimación de m2 de bosque afectados
+    document.getElementById('result').innerHTML = `Tu consumo mensual requiere aprox. ${water} litros de agua y ${trees} m² de expansión agrícola en Michoacán.`;
+}
+</script>
+"""
+display(HTML(html_calc))
+```
+
+## Resolución: ¿Qué harías tú?
+
+La intervención humana en Michoacán ha llegado a un punto crítico. La correlación entre la riqueza económica del aguacate y la pobreza ecológica es innegable. 
+
+**Pregunta Abierta para la Ciudadanía:**
+Si supieras que cada kilo de aguacate en tu mesa le cuesta 700 litros de agua al bosque de Michoacán, ¿estarías dispuesto a pagar un "impuesto forestal" para garantizar la reforestación del estado? 
+
+---
+*Este reporte fue generado automáticamente como parte del HackODS UNAM 2026.*

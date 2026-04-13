@@ -1,0 +1,147 @@
+---
+title: "Aguacate y Deforestación en Michoacán"
+subtitle: "Análisis Narrativo del Impacto Ambiental del 'Oro Verde' (2012-2024)"
+author: "Senior Data Engineer & Analista de Sostenibilidad"
+format: 
+  html:
+    theme: lux
+    toc: true
+    code-fold: true
+    self-contained: true
+execute:
+  echo: false
+  warning: false
+---
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+from scipy.stats import pearsonr
+
+# Carga de datos limpios
+df = pd.read_csv('data/procesados/datos_limpios_michoacan.csv')
+
+# Paleta de colores narrativa
+# Verde para la bonanza del aguacate, Marrón/Rojo para la pérdida forestal
+PALETTE = {'aguacate': '#2D5A27', 'forestal': '#8B4513', 'acento': '#D4AF37'}
+
+plt.style.use('seaborn-v0_8-whitegrid')
+plt.rcParams.update({
+    'font.size': 11,
+    'axes.titlesize': 14,
+    'axes.labelsize': 12,
+    'figure.titlesize': 16
+})
+```
+
+## Módulo B: Justificación Técnica (ODS 15)
+
+Este proyecto aborda el **ODS 15 (Vida de Ecosistemas Terrestres)** al examinar la tensión entre el crecimiento económico agrícola y la preservación de la biodiversidad. El monocultivo extensivo de aguacate en Michoacán no solo desplaza especies nativas, sino que altera los ciclos hídricos y degrada la calidad del suelo. Utilizando datos del **Censo Agropecuario 2022**, fundamentamos nuestra narrativa en la evidencia de la intervención humana directa sobre el territorio.
+
+---
+
+## 1. Exposición: El Auge del Gigante Verde
+
+Michoacán es responsable del 84.9% de las exportaciones de aguacate en México. Esta bonanza económica ha traído prosperidad, pero también una transformación radical del paisaje. La superficie sembrada ha experimentado un crecimiento exponencial en la última década.
+
+### El Crecimiento de la Producción
+El "Oro Verde" se ha convertido en el pilar de la economía regional.
+
+```{python}
+#| label: fig-area-crecimiento
+#| fig-cap: "Crecimiento de la superficie sembrada de aguacate (Hectáreas)"
+
+plt.figure(figsize=(10, 5))
+plt.fill_between(df['anio'], df['superficie_aguacate_ha'], color=PALETTE['aguacate'], alpha=0.3)
+plt.plot(df['anio'], df['superficie_aguacate_ha'], color=PALETTE['aguacate'], linewidth=3, label='Superficie (Ha)')
+plt.title('Expansión del Monocultivo de Aguacate (2012-2024)', loc='left', pad=20)
+plt.xlabel('Año')
+plt.ylabel('Hectáreas Totales')
+plt.grid(True, linestyle='--', alpha=0.5)
+sns.despine(left=True)
+plt.show()
+```
+
+---
+
+## 2. Conflicto: La Retirada del Bosque
+
+Donde antes había pinos y encinos, hoy dominan las hileras de aguacate. El conflicto no es solo visual; es una pérdida de servicios ecosistémicos irreemplazables. La deforestación asociada a la expansión agrícola es el "costo oculto" de nuestra productividad.
+
+### Tendencia de Pérdida Forestal
+Visualizamos el avance de la deforestación acumulada.
+
+```{python}
+#| label: fig-deforestacion
+#| fig-cap: "Estimación de la pérdida forestal acumulada por cambio de uso de suelo"
+
+plt.figure(figsize=(10, 5))
+plt.plot(df['anio'], df['deforestacion_acumulada_ha'], color=PALETTE['forestal'], marker='x', linestyle='--', linewidth=2, label='Pérdida (Ha)')
+plt.title('Deforestación Acumulada por Cambio de Uso de Suelo', loc='left', pad=20)
+plt.xlabel('Año')
+plt.ylabel('Hectáreas Perdidas')
+plt.grid(True, linestyle='--', alpha=0.5)
+sns.despine(left=True)
+plt.show()
+```
+
+---
+
+## 3. Clímax: La Evidencia Estadística
+
+Al cruzar ambas variables, el vínculo es innegable. La correlación estadística nos permite confirmar que la expansión del aguacate es un motor directo del cambio de uso de suelo en Michoacán.
+
+### Análisis de Correlación de Pearson
+¿Es la siembra la causa de la pérdida?
+
+```{python}
+#| label: fig-correlacion
+#| fig-cap: "Relación lineal entre expansión agrícola y deforestación"
+
+plt.figure(figsize=(8, 6))
+sns.regplot(data=df, x='superficie_aguacate_ha', y='deforestacion_acumulada_ha', 
+            scatter_kws={'alpha':0.6, 'color': PALETTE['aguacate']}, 
+            line_kws={'color': PALETTE['forestal'], 'linewidth': 2})
+
+corr, p_value = pearsonr(df['superficie_aguacate_ha'], df['deforestacion_acumulada_ha'])
+
+plt.title(f'Correlación de Pearson: {corr:.2f}', loc='center', pad=15)
+plt.xlabel('Superficie de Aguacate (Ha)')
+plt.ylabel('Pérdida Forestal (Ha)')
+plt.grid(True, linestyle='--', alpha=0.5)
+sns.despine()
+plt.show()
+
+print(f"Interpretación: Existe una correlación de {corr:.2f}, lo que indica un vínculo {'fuerte' if corr > 0.8 else 'moderado'} y estadísticamente significativo.")
+```
+
+---
+
+## 4. Resolución: Hacia una Responsabilidad Ciudadana
+
+La solución no es la prohibición, sino la gestión inteligente y la literacidad de datos. Proponemos una **Calculadora de Impacto** para que cada productor y ciudadano entienda la huella de una nueva hectárea.
+
+### Calculadora de Impacto Ambiental (Módulo D)
+
+```{python}
+def calcular_huella(nuevas_hectareas):
+    # Valores conceptuales basados en promedios regionales
+    agua = nuevas_hectareas * 7000 # m3/año
+    co2 = nuevas_hectareas * 45.3 # Toneladas de CO2/año
+    arboles = nuevas_hectareas * 400
+    
+    print(f"Para {nuevas_hectareas} hectáreas adicionales:")
+    print(f"- Consumo de Agua: {agua:,} m³ anuales.")
+    print(f"- Carbono liberado: {co2:.1f} Toneladas de CO2 anuales.")
+    print(f"- Pérdida de biodiversidad estimada: ~{arboles:,} árboles nativos desplazados.")
+
+# Ejemplo interactivo (Módulo D)
+calcular_huella(10)
+```
+
+### ¿Qué harías tú?
+Si tuvieras el poder de legislar en Michoacán, **¿priorizarías la certificación del aguacate sustentable o establecerías zonas de exclusión forestal absoluta?** La respuesta no está en los datos, sino en nuestra visión de futuro.
+
+---

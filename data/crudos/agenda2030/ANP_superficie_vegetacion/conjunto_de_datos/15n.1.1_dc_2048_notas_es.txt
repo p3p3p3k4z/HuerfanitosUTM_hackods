@@ -1,0 +1,14 @@
+﻿"Nota: 1) Se obtuvo realizando el cálculo del porcentaje de mantenimiento de superficie con cobertura vegetal de las ANP terrestres, con base en el Análisis de la Tasa de Transformación
+del Hábitat en Áreas Naturales Protegidas Federales. Se calculó la diferencia de superficie con cobertura vegetal entre 2015 y 2020. Al no haber diferencias,
+la superficie de cobertura vegetal se mantuvo al 100%.  
+ 2) Se obtuvo calculando el porcentaje de incremento de superficie con cobertura vegetal de las ANP terrestres, con base en el Análisis de la Tasa de Transformación
+del Hábitat en Áreas Naturales Protegidas Federales. Se calculó la diferencia de superficie con cobertura vegetal entre 2015 y 2020 y la tasa de variación correspondiente.
+ 
+ 3) Se obtuvo realizando el cálculo del porcentaje de pérdida menor del 5% de superficie con cobertura vegetal de las ANP terrestres, con base en el Análisis de la Tasa
+de Transformación del Hábitat en Áreas Naturales Protegidas Federales. Se calculó la diferencia de superficie con cobertura vegetal entre 2015 y 2020 y la tasa de variación correspondiente. "
+"Fuente: -Comisión Nacional de Áreas Naturales Protegidas (CONANP). Información Geoespacial de las Áreas Naturales Protegidas. Consultado en:  http://sig.conanp.gob.mx/website/pagsig/iin.htm
+ Fecha de consulta: octubre de 2023. 
+-Gebhardt, S. y T. Wehrmann, 2021. Análisis de la Tasa de Transformación del Hábitat en Áreas Naturales Protegidas
+Federales Contrato NO. O-17-5-20-0177. Fondo Mexicano para la Conservación de la Naturaleza, A.C. y Earth Observation Solutions and Services (EOSS) GMBH. Consultado
+en:  
+ https://simec.conanp.gob.mx/pdf_evaluacion/An%C3%A1lisis%20TTH%20_ANP%20federales_2021_FMCN.pdf  Fecha de consulta: octubre de 2023. "

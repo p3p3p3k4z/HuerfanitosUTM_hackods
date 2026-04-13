@@ -1,0 +1,78 @@
+﻿Title: 15n.2.1 Tasa anual de deforestación bruta a nivel nacional
+
+Description: Mide la tasa anual de pérdida de vegetación forestal (tierras forestales) a nivel nacional como un indicador proxi del nivel de protección y conservación de los ecosistemas forestales incluyendo los bienes y servicios ecosistémicos que contribuyen al bienestar de la población.
+
+Modified: 2025-12-31
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: contacto.ods@agenda2030.mx
+
+License:http://ods.inegi.org.mxdocs/doctos/system/terminos_uso_SIODS_es.pdf
+
+ContactPoint: Sergio Humberto Graf Montero
+Director General
+Periférico Poniente 5360; San Juan de Ocotán 45019, Jalisco
+(33) 3777-7000 ext. 1015/1019
+directorgeneral@conafor.gob.mx
+Jorge David Fernández Medina
+Coordinador General de Planeación e Información
+Periférico Poniente 5360; San Juan de Ocotán 45019, Jalisco
+(33) 3777-7000 ext. 4001
+jfernandez@conafor.gob.mx
+José Armando Alanís de la Rosa
+Gerente de Sistema Nacional de Monitoreo Forestal
+Periférico Poniente 5360; San Juan de Ocotán 45019, Jalisco
+(33) 3777-7000 ext. 4001
+jalanis@conafor.gob.mx
+
+Temporal: 2001-2024
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Anual
+
+Distribution:http://ods.inegi.org.mx/docs/files/csv/zip/15n.2.1_es.zip
+
+Goal: 15. Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres, gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad 
+
+Target:  Meta 15n.2 Gestión sostenible de los recursos naturales y la distribución equitativa de los beneficios derivados de éstos considerando el patrimonio biocultural de las comunidades
+
+Type of indicator: Nacional
+
+Algorithm: 15n.2.1_ES.gif
+
+Description of the indicator: La tasa anual de deforestación bruta a nivel nacional (TDEFB) mide el porcentaje de variación de la superficie de tierras forestales, expresada en hectáreas, estimada para el año t, en comparación con la superficie de tierras forestales, expresada en hectáreas, estimada en el año t-1.
+La estimación de tierras forestales se realiza mediante el enfoque de muestreo del sistema Satelital de Monitoreo Forestal (SAMOF) implementado por la Comisión Nacional Forestal (CONAFOR).
+
+Unit of measure: Porcentaje
+
+Geographic coverage: Nacional
+
+Opportunity: 1 año
+
+Source of statistical information used to calculate the indicator: Comisión Nacional Forestal (CONAFOR) https://www.gob.mx/conafor
+
+Date of next update of indicator: 31 de diciembre de 2026
+
+Unit of the State responsible for calculating the indicator: Comisión Nacional Forestal (CONAFOR)  
+ https://www.gob.mx/conafor  
+
+Importance and purpose of the indicator: El indicador mide la tasa anual de pérdida de vegetación forestal (tierras forestales) a nivel nacional como un indicador proxi del nivel de protección y conservación de los ecosistemas forestales incluyendo los bienes y servicios ecosistémicos que contribuyen al bienestar de la población. En la medida que se evita la pérdida de la vegetación forestal, se contribuye a gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad. 
+
+National and/or international reference: Panel Intergubernamental de Expertos sobre el Cambio Climático. 2006. Directrices del IPCC de 2006 para los inventarios nacionales de gases de efecto invernadero, Volumen
+4 Agricultura, silvicultura y otros usos de la tierra. Sección 3. Representación Coherente de las tierras y Anexo 3A.3 Muestreo y subsección 3A.3.5 Estimación
+de superficies mediante proporciones 
+Global Forest Observations Initiative (GFOI). 2020. Integración de las observaciones por teledetección y terrestres para estimar las emisiones y absorciones de gases
+de efecto invernadero en los bosques: Métodos y Orientación de la Iniciativa Mundial de Observación de los Bosques, Edición 3.0. Sección 4.2.3 Estimación de la superficie,
+de cambios en la superficie y de sus incertidumbres 
+Comisión Nacional Forestal (CONAFOR). 2020. Estimación de la tasa de deforestación bruta en México para el periodo 2001-2018 mediante el método de muestreo. Documento
+técnico 
+Comisión Nacional Forestal (CONAFOR). 2020. Estimación de la tasa de deforestación bruta en México para el periodo 2001-2018 mediante el método de muestreo. Resumen ejecutivo 
+
+Observations: Este indicador está muy correlacionado con el indicador global 15.1.1 "Superficie forestal en proporción a la superficie total; mismo que ya se reporta en el SIODS". Sin embargo, la UE considera apropiada su inclusión en el MNI debido a que con base en este indicador es que se está definiendo la meta (que afecta el resultado en el 15.1.1).
+Se han de destacar las diferencias conceptuales y metodológicas entre el cálculo del indicador global y éste. Este indicador ya fue presentado ante el CTE de recursos naturales, específicamente en el Comité Técnico Especializado de Información en Materia de Uso del Suelo, Vegetación y Recursos Forestales (CTEIMUSVRF).
+El cálculo de este indicador incluye tierras forestales que presentan un porcentaje de cobertura arbolada y/o de especies leñosas superior al 10%, con especies que superan los 4 metros de altura o son capaces de alcanzar esta altura in situ, y con una unidad mínima mapeable de 1 hectárea. Como consecuencia de ello, la superficie de tierras forestales que se reporta para el indicador nacional "15n.2.1. Tasa anual de deforestación bruta a nivel nacional" es mayor a la superficie que se reporta en el indicador global "15.1.1 Superficie forestal como proporción de la superficie total", debido a que ésta considera solo la superficie de bosques y selvas (superficie arbolada).
+Respecto a la Oportunidad del indicador, se calcula un año calendario posterior al año en que se estima la actualización debido a que se requiere contar con imágenes de satélite de mediana, alta y muy alta resolución disponibles de manera gratuita en diversas plataformas como Google Earth, Yandex o Bing, las cuales son evaluadas mediante la herramienta Collect Earth desarrollada por la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO).
+Este indicador forma parte del Catálogo Nacional de Indicadores (CNI).
+
