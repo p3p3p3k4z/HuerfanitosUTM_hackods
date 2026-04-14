@@ -4,7 +4,7 @@
 ## Integrantes de equipo
 - Mario Enrique Ramirez Gallardo
 - Irving Tristan Perez Zurita
-- Dante Neil
+- Dante Neil Martinez Jimenez
 
 ## Datos
 
