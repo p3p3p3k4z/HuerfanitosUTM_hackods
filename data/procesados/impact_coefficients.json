@@ -1,0 +1,11 @@
+{
+    "calculadora_impacto": {
+        "coeficientes": {
+            "agua_litros_por_kg": 600.0,
+            "co2_ton_por_ha_forestal": 150.0,
+            "precio_estimado_ton_usd": 2000.0,
+            "empleos_por_ha": 1.5
+        },
+        "notas": "Coeficientes promedio basados en literatura académica para el cultivo de aguacate Hass en zonas templadas de México (SIAP/CONAGUA)."
+    }
+}
