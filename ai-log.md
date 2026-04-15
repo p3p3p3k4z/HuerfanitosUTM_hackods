@@ -1,8 +1,9 @@
 # AI-LOG
 
-
-| fecha | Tarea |  Prompt | Resultado|
-| ----- | ----- |  ------ | ---------|
-| 9-04-26 | Creacion licencia|  como obtengo con curl la licencia Licencia CC BY-SA desde la terminal ? | Licencia CC|
-
-
+| Fecha | Tarea Realizada | Prompt Utilizado | Resultado / Implementación |
+| :--- | :--- | :--- | :--- |
+| 2026-04-09 | Creación de licencia | ¿Cómo obtengo con curl la licencia CC BY-SA desde la terminal? | Licencia CC BY-SA 4.0 obtenida e integrada en el archivo `LICENSE`. |
+| 2026-04-10 | Pipeline de Limpieza y ETL (Script) | **Rol:** Actúa como un Senior Data Engineer y Especialista en Bioinformática/Sostenibilidad.<br><br>**Contexto del Proyecto:** Participación en el HackODS UNAM 2026 enfocado en el ODS 15...<br><br>**Misión:** Crear un script de Python profesional para el procesamiento de datos (ETL) que realice un escaneo profundo de `data/crudos/` y genere un dataset maestro unificado...<br><br>**Especificaciones:** Usar `uv`, código PEP 8, Type Hinting, escaneo recursivo por palabras clave (aguacate, deforestación, Michoacán).<br><br>**Fases:** Auditoría de Metadatos, Limpieza y Filtrado Dirigido, Filosofía de Datos (Literacidad para narrativa). | Script `etl_maestro_ods15.py` generado, capaz de auditar la data cruda y generar `dataset_maestro_ods15.csv` documentando metadatos. |
+| 2026-04-11 | Estructuración Narrativa (Contexto) | Actúa como un Arquitecto de Soluciones de Datos y Consultor en Sostenibilidad para la Agenda 2030. Genera el contexto metodológico para mi proyecto HackODS usando la **Pirámide de Freytag** (Exposición, Conflicto, Clímax, Resolución) y los principios de **Literacidad en Datos**. | Definición de las 4 fases del proyecto y justificación de datos (Módulo B) basándose en la necesidad de ciudadanizar la información del INEGI y SIAP. |
+| 2026-04-13 | Visualización de Datos (Prototipo) | Actúa como un Senior Data Visualization Engineer experto en Plotly. Genera el código para una libreta de Jupyter (`.ipynb`) consumiendo el archivo `dataset_maestro_ods15.csv`.<br><br>Crea gráficas interactuando las variables de hectáreas de aguacate vs. bosque remanente y un scatter plot del `impact_ratio`. Elimina el desorden visual y prioriza que los datos hablen por sí mismos (sin ipywidgets, todo nativo en Plotly). | Libreta de Jupyter generada con 4 visualizaciones clave, aplicando paletas de color contrastantes y anotaciones estadísticas (Módulo D). |
+| 2026-04-14 | Auditoría de Veracidad | Audita los datos procesados en el dataset maestro cruzándolos con los archivos crudos del Censo Agropecuario 2022 y la Agenda 2030. Justifica la existencia de un `impact_ratio` mayor a 1 como prueba estadística de deforestación. | Documentos `AUDITORIA_INTEGRIDAD.md` y `DICCIONARIO_DATOS_ODS15.md` generados para validar las anomalías de cambio de uso de suelo. |
