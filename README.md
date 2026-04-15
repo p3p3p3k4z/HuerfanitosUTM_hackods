@@ -21,7 +21,7 @@ Para detalles técnicos adicionales, consulte [transparencia_fuentes_ods15.json]
 ## Descripción del Proyecto
 Este proyecto analiza el impacto ambiental del monocultivo de aguacate en el estado de Michoacán, centrándose en el **ODS 15: Vida de Ecosistemas Terrestres**. A través de un pipeline de datos robusto y una narrativa basada en la pirámide de Freytag, buscamos identificar zonas donde la expansión agrícola está invadiendo áreas forestales protegidas.
 
-## Problema Central
+## Problema Central (PREGUNTA)
 ¿En qué medida la expansión del monocultivo de aguacate compromete la integridad de los ecosistemas forestales en Michoacán y el cumplimiento de las metas del ODS 15?
 
 ## Coherencia Narrativa
