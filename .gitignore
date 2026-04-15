@@ -9,3 +9,5 @@ wheels/
 .venv
 
 .vscode/
+
+notebooks/.ipynb_checkpoints
