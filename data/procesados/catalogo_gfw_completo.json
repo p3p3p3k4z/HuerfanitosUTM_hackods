@@ -1,0 +1,16 @@
+{
+    "datasets": [
+        "clases_bosque_natural",
+        "cobertura_municipal",
+        "historico_perdida_emisiones",
+        "drivers_perdida_completo",
+        "perdida_bosque_primario"
+    ],
+    "variables_totales": [
+        "umd_tree_cover_loss__ha",
+        "gfw_gross_emissions_co2e_all_gases__Mg",
+        "drivers_type",
+        "sbtn_natural_forests__class",
+        "area__ha"
+    ]
+}
