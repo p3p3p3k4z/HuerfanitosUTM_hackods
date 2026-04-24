@@ -2,16 +2,15 @@
 title: "El costo oculto del Oro Verde"
 subtitle: "Monocultivo de aguacate y deforestación en Michoacán"
 author: "HuerfanitosUTM"
-date: "2026-04-14"
 format:
-  html:
-    toc: true
-    toc-depth: 2
-    number-sections: true
-    theme: cosmo
-    css: 
-      - inline_styles.css
-    highlight-style: github
+  dashboard:
+    orientation: rows
+    scrolling: false
+    theme: darkly
+    css: dashboard_styles.css
+    nav-buttons:
+      - icon: github
+        href: https://github.com/HuerfanitosUTM
 execute:
   echo: false
   warning: false
@@ -19,472 +18,184 @@ execute:
 ---
 
 ```{python}
+#| label: setup
+#| include: false
+
 # ============================================================================
-# SETUP: Librerías y configuración visual
+# SETUP: Librerías y resolución de rutas
 # ============================================================================
 from pathlib import Path
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import unicodedata
-from glob import glob
+import plotly.express as px
+import plotly.graph_objects as go
 
-# Resolver rutas de datos
+# --- Resolver directorio de datos ---
 cwd = Path.cwd()
-candidatos_data = [cwd / 'data', cwd.parent / 'data', Path.home() / 'Documents' / 'Proyectos' / 'hackods' / 'data']
-DATA_DIR = next((p for p in candidatos_data if p.exists()), None)
+candidatos = [cwd / "data", cwd.parent / "data"]
+DATA_DIR = next((p for p in candidatos if p.exists()), None)
+PROC = DATA_DIR / "procesados" if DATA_DIR else None
 
-# Paleta de colores (código simétrico al notebook)
-THEME = {
-    'primary': '#0072B2',      
-    'secondary': '#E69F00',    
-    'accent': '#009E73',       
-    'alert': '#D55E00',        
-    'highlight': '#CC79A7',    
-    'neutral': '#4D4D4D',      
-    'text_dark': '#1A1A1A',    
-    'bg_light': '#F7F7F7'      
-}
-PALETTE = [THEME['primary'], THEME['secondary'], THEME['accent'], THEME['alert'], THEME['highlight'], THEME['neutral']]
+# --- Paleta ---
+VERDE  = "#2e7d32"
+AMBAR  = "#ffa726"
+ROJO   = "#ef5350"
+GRIS   = "#b0bec5"
 
-sns.set_theme(style='whitegrid', context='talk')
-plt.rcParams['figure.figsize'] = (12, 6)
-plt.rcParams['axes.titlesize'] = 14
-plt.rcParams['axes.labelsize'] = 11
+LAYOUT_DARK = dict(
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    font=dict(family="Inter, sans-serif", color="#e0e0e0", size=11),
+    margin=dict(l=50, r=20, t=10, b=30),
+    hoverlabel=dict(bgcolor="#1e252e", font_size=11, font_family="Inter"),
+)
 
-# Funciones auxiliares
-def normalize_cols(df):
-    out = df.copy()
-    out.columns = (
-        out.columns
-        .str.strip()
-        .str.lower()
-        .str.replace(' ', '_', regex=False)
-        .str.replace('á', 'a', regex=False)
-        .str.replace('é', 'e', regex=False)
-        .str.replace('í', 'i', regex=False)
-        .str.replace('ó', 'o', regex=False)
-        .str.replace('ú', 'u', regex=False)
-    )
-    return out
-
-def _norm_text(x):
-    s = str(x).strip()
-    return ''.join(ch for ch in unicodedata.normalize('NFKD', s) if not unicodedata.combining(ch)).lower()
-
-def _read_csv_flexible(path):
-    for enc in ['utf-8', 'utf-8-sig', 'latin1', 'cp1252']:
-        try:
-            return pd.read_csv(path, encoding=enc)
-        except:
-            continue
-    raise ValueError(f'No se pudo leer: {path}')
-
-def _fix_mojibake_cols(df):
-    mapper = {}
-    for c in df.columns:
-        cc = str(c)
-        cc = cc.replace('A\xf1o', 'Anio').replace('AÃ±o', 'Anio')
-        mapper[c] = cc
-    return df.rename(columns=mapper)
+# ============================================================================
+# CARGA DE DATOS
+# ============================================================================
+df_maestro = pd.read_csv(PROC / "dataset_maestro_ods15.csv") if PROC else pd.DataFrame()
+df_agri = pd.read_csv(PROC / "gfw_historico_agricola_mich.csv") if PROC else pd.DataFrame()
+df_drivers = pd.read_csv(PROC / "gfw_drivers_perdida_completo_es.csv") if PROC else pd.DataFrame()
+df_bio = pd.read_csv(PROC / "biodiversidad_especies_ods15.csv") if PROC else pd.DataFrame()
+df_perdida = pd.read_csv(PROC / "gfw_historico_perdida_emisiones.csv") if PROC else pd.DataFrame()
 ```
 
+## Row {height=18%}
 
-## Pregunta central
-
-¿En qué medida la expansión del monocultivo de aguacate compromete la integridad de los ecosistemas forestales en Michoacán y el cumplimiento de las metas del ODS 15?
-
-## Fuentes de datos
-
-
-## Sección I. 
-
-En esta sección se narra el crecimiento del monocultivo de aguacate en el tiempo.
+### Column {width=55%}
 
 ```{python}
-# ============================================================================
-# SECCIÓN I: Crecimiento del aguacate
-# ============================================================================
-
-# 1) Carga de datos SIAP
-paths = sorted(glob(str(DATA_DIR / '180822-agt-cierre-*.csv'))) if DATA_DIR else []
-frames = []
-for p in paths:
-    d = _read_csv_flexible(p)
-    d = _fix_mojibake_cols(d)
-    d = normalize_cols(d)
-    frames.append(d)
-
-if frames:
-    siap_avo = pd.concat(frames, ignore_index=True)
-    
-    # Identificar columna de año
-    year_col = next((c for c in ['anioagricola', 'agroagricola', 'año', 'anio'] if c in siap_avo.columns), None)
-    
-    if year_col:
-        siap_avo[year_col] = pd.to_numeric(siap_avo[year_col], errors='coerce')
-        siap_avo['cosechada'] = pd.to_numeric(
-            siap_avo['cosechada'].astype(str).str.replace(',', '', regex=False),
-            errors='coerce'
-        )
-        siap_avo['produccion'] = pd.to_numeric(
-            siap_avo['produccion'].astype(str).str.replace(',', '', regex=False),
-            errors='coerce'
-        )
-        
-        # Filtrar aguacate
-        siap_avo = siap_avo[siap_avo['cultivo'].astype(str).map(_norm_text).str.contains('aguacate', na=False)].copy()
-        
-        if not siap_avo.empty:
-            # Top 10 entidades en último año
-            latest_year = int(siap_avo[year_col].dropna().max())
-            top_aguacate = (
-                siap_avo[siap_avo[year_col] == latest_year]
-                .groupby('estado', as_index=False)['cosechada']
-                .sum()
-                .dropna(subset=['cosechada'])
-                .sort_values('cosechada', ascending=False)
-                .head(10)
-                .sort_values('cosechada', ascending=True)
-            )
-            top_aguacate['participacion_pct'] = (top_aguacate['cosechada'] / top_aguacate['cosechada'].sum()) * 100
-            
-            # Gráfica: Top 10 entidades
-            fig, ax = plt.subplots(figsize=(10, 6))
-            colors = [THEME['alert'] if 'michoacan' in _norm_text(e) else THEME['primary'] for e in top_aguacate['estado']]
-            ax.barh(top_aguacate['estado'], top_aguacate['cosechada'], color=colors)
-            ax.set_title(f'Top 10 entidades por superficie cosechada de aguacate ({latest_year})', fontsize=14, fontweight='bold')
-            ax.set_xlabel('Hectáreas cosechadas')
-            ax.set_ylabel('')
-            plt.tight_layout()
-            plt.show()
-            
-            # Serie temporal Michoacán
-            serie_micho = (
-                siap_avo[siap_avo['estado'].astype(str).map(_norm_text).str.contains('michoacan', na=False)]
-                .groupby(year_col, as_index=False)[['cosechada', 'produccion']]
-                .sum()
-                .rename(columns={year_col: 'anio'})
-                .sort_values('anio')
-            )
-            
-            if not serie_micho.empty:
-                fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
-                
-                # Superficie cosechada
-                ax1.plot(serie_micho['anio'], serie_micho['cosechada'], marker='o', linewidth=2.5, 
-                        markersize=6, color=THEME['secondary'], label='Superficie cosechada')
-                ax1.fill_between(serie_micho['anio'], serie_micho['cosechada'], alpha=0.3, color=THEME['secondary'])
-                ax1.set_title('Superficie cosechada de aguacate en Michoacán', fontsize=12, fontweight='bold')
-                ax1.set_xlabel('Año agrícola')
-                ax1.set_ylabel('Hectáreas')
-                ax1.grid(True, alpha=0.3)
-                
-                # Producción
-                ax2.bar(serie_micho['anio'], serie_micho['produccion'], color=THEME['accent'], alpha=0.8, label='Producción')
-                ax2.set_title('Producción de aguacate en Michoacán', fontsize=12, fontweight='bold')
-                ax2.set_xlabel('Año agrícola')
-                ax2.set_ylabel('Toneladas')
-                ax2.grid(True, alpha=0.3, axis='y')
-                
-                plt.tight_layout()
-                plt.show()
-
-                # Rendimiento (toneladas por hectárea)
-                serie_micho['rendimiento'] = serie_micho['produccion'] / serie_micho['cosechada']
-                fig, ax = plt.subplots(figsize=(10, 4))
-                ax.plot(serie_micho['anio'], serie_micho['rendimiento'], marker='o', linewidth=2.5, color=THEME['highlight'])
-                ax.set_title('Rendimiento de aguacate en Michoacán (t/ha)', fontsize=12, fontweight='bold')
-                ax.set_xlabel('Año agrícola')
-                ax.set_ylabel('t/ha')
-                ax.grid(True, alpha=0.3)
-                plt.tight_layout()
-                plt.show()
-                
-                print("Datos de SIAP cargados y visualizados")
+#| title: "ODS 15 · Vida de Ecosistemas Terrestres"
+from IPython.display import Markdown
+Markdown("""<div class="pregunta-ods">
+<span class="ods-badge">🌲 ODS 15 · VIDA DE ECOSISTEMAS TERRESTRES</span>
+<p class="pregunta-texto">¿En qué medida la expansión del <em>monocultivo de aguacate</em> compromete la integridad de los ecosistemas forestales en Michoacán y el cumplimiento de las metas del <em>ODS 15</em>?</p>
+</div>""")
 ```
 
-
-**Hallazgos clave:**
-
-## Sección I-B. Contexto internacional
+### Column {width=45%}
 
 ```{python}
-# Producción internacional de aguacate (FAOSTAT)
-fao_candidates = sorted(DATA_DIR.glob('*FAOSTAT*.csv')) if DATA_DIR else []
-
-if fao_candidates:
-    fao_raw = None
-    for enc in ['utf-8-sig', 'utf-8', 'latin1', 'cp1252']:
-        try:
-            fao_raw = pd.read_csv(fao_candidates[0], encoding=enc)
-            break
-        except Exception:
-            continue
-
-    if fao_raw is not None:
-        fao_int = normalize_cols(fao_raw)
-        year_col_fao = 'año' if 'año' in fao_int.columns else ('anio' if 'anio' in fao_int.columns else None)
-
-        if year_col_fao and {'producto', 'elemento', 'valor', 'area'}.issubset(set(fao_int.columns)):
-            fao_int[year_col_fao] = pd.to_numeric(fao_int[year_col_fao], errors='coerce')
-            fao_int['valor'] = pd.to_numeric(fao_int['valor'], errors='coerce')
-
-            intl_prod = fao_int[
-                fao_int['producto'].astype(str).map(_norm_text).str.contains('aguacate', na=False) &
-                fao_int['elemento'].astype(str).map(_norm_text).str.contains('produccion', na=False)
-            ].copy().rename(columns={year_col_fao: 'anio'})
-
-            if not intl_prod.empty and intl_prod['anio'].notna().any():
-                latest_year_fao = int(intl_prod['anio'].max())
-                top_latest = (
-                    intl_prod[intl_prod['anio'] == latest_year_fao]
-                    .sort_values('valor', ascending=False)
-                    .head(10)
-                    .sort_values('valor', ascending=True)
-                )
-
-                top_latest['color'] = np.where(
-                    top_latest['area'].astype(str).map(_norm_text).str.contains('mexico', na=False),
-                    THEME['alert'],
-                    THEME['accent']
-                )
-
-                fig, ax = plt.subplots(figsize=(11, 6))
-                ax.barh(top_latest['area'], top_latest['valor'], color=top_latest['color'])
-                ax.set_title(f'Producción internacional de aguacate ({latest_year_fao})', fontsize=13, fontweight='bold')
-                ax.set_xlabel('Toneladas')
-                ax.set_ylabel('País')
-                plt.tight_layout()
-                plt.show()
-
-                mx = intl_prod[intl_prod['area'].astype(str).map(_norm_text).str.contains('mexico', na=False)][['anio', 'valor']].rename(columns={'valor': 'mexico'})
-                others = (
-                    intl_prod[~intl_prod['area'].astype(str).map(_norm_text).str.contains('mexico', na=False)]
-                    .groupby('anio', as_index=False)['valor']
-                    .mean()
-                    .rename(columns={'valor': 'promedio_otros'})
-                )
-                cmp = mx.merge(others, on='anio', how='inner')
-
-                if not cmp.empty:
-                    fig, ax = plt.subplots(figsize=(11, 4))
-                    sns.lineplot(data=cmp, x='anio', y='mexico', marker='o', color=THEME['alert'], label='México', ax=ax)
-                    sns.lineplot(data=cmp, x='anio', y='promedio_otros', marker='o', color=THEME['secondary'], label='Promedio otros', ax=ax)
-                    ax.set_title('México vs promedio internacional', fontsize=13, fontweight='bold')
-                    ax.set_xlabel('Año')
-                    ax.set_ylabel('Toneladas')
-                    ax.grid(True, alpha=0.3)
-                    plt.tight_layout()
-                    plt.show()
+#| title: "Datos clave"
+Markdown("""<div class="stats-grid">
+  <div class="stat-item"><span class="stat-value">113</span><span class="stat-label">Municipios</span></div>
+  <div class="stat-item"><span class="stat-value stat-red">111,224 ha</span><span class="stat-label">Bosque perdido</span></div>
+  <div class="stat-item"><span class="stat-value stat-amber">80.7%</span><span class="stat-label">Sin apoyo gub.</span></div>
+  <div class="stat-item"><span class="stat-value">51M Mg</span><span class="stat-label">Emisiones CO₂</span></div>
+</div>""")
 ```
 
-## Sección II.
+## Row {height=41%}
 
-Aquí se muestra la presión ambiental asociada al crecimiento del cultivo.
+### Column {width=50%}
 
 ```{python}
-# ============================================================================
-# SECCIÓN II: Cobertura forestal
-# ============================================================================
+#| title: "Análisis de Burbujas: Producción vs Riesgo de Invasión Forestal"
 
-# Cargar datos de vegetación/transectos
-veg_path = None
-if DATA_DIR:
-    candidates = sorted(DATA_DIR.rglob('*.csv'))
-    for c in candidates:
-        if any(k in c.name.lower() for k in ['91d39f08', 'transect', 'veget', 'cobertura']):
-            veg_path = c
-            break
-
-if veg_path:
-    veg_data = _read_csv_flexible(veg_path)
-    veg_data = normalize_cols(veg_data)
-    
-    # Renombrar columnas si es necesario
-    rename_map = {}
-    if 'año' in veg_data.columns:
-        rename_map['año'] = 'anio'
-    if 'componente' in veg_data.columns:
-        rename_map['componente'] = 'comp'
-    if rename_map:
-        veg_data = veg_data.rename(columns=rename_map)
-    
-    # Crear columnas si faltan
-    if '_id' not in veg_data.columns:
-        veg_data['_id'] = np.arange(len(veg_data))
-    if 'id_conglomerado' not in veg_data.columns:
-        veg_data['id_conglomerado'] = veg_data['_id']
-    
-    # Limpiar y procesar
-    if 'anio' in veg_data.columns and 'comp' in veg_data.columns:
-        veg_data['anio'] = pd.to_numeric(veg_data['anio'], errors='coerce')
-        veg_data = veg_data.dropna(subset=['anio']).copy()
-        veg_data['anio'] = veg_data['anio'].astype(int)
-        veg_data['comp_norm'] = veg_data['comp'].astype(str).str.lower().str.strip()
-        
-        # Clasificar en categorías
-        def map_to_categoria(comp_str):
-            if 'arbol' in comp_str:
-                return 'Bosque'
-            elif 'arbusto' in comp_str:
-                return 'Matorral'
-            elif 'pasto' in comp_str:
-                return 'Pastizal'
-            elif 'hierba' in comp_str or 'herbáce' in comp_str:
-                return 'Herbáceo'
-            else:
-                return 'Otro'
-        
-        veg_data['categoria'] = veg_data['comp_norm'].apply(map_to_categoria)
-        veg_data['es_forestal'] = veg_data['categoria'].isin(['Bosque', 'Matorral'])
-        
-        # Agregaciones
-        cobertura_anio = (
-            veg_data.groupby('anio')
-            .agg({'es_forestal': lambda x: (x.sum() / len(x)) * 100})
-            .rename(columns={'es_forestal': 'porcentaje_forestal'})
-            .reset_index()
-        )
-        
-        # Gráfica: Tendencia de cobertura forestal
-        fig, ax = plt.subplots(figsize=(10, 6))
-        ax.plot(cobertura_anio['anio'], cobertura_anio['porcentaje_forestal'], 
-               marker='s', linewidth=3, markersize=8, color=THEME['accent'], label='Cobertura forestal')
-        ax.fill_between(cobertura_anio['anio'], cobertura_anio['porcentaje_forestal'], 
-                       alpha=0.2, color=THEME['accent'])
-        ax.set_title('Tendencia de cobertura forestal en Michoacán', fontsize=14, fontweight='bold')
-        ax.set_xlabel('Año')
-        ax.set_ylabel('Porcentaje de cobertura forestal (%)')
-        ax.grid(True, alpha=0.3)
-        ax.set_ylim(0, 100)
-        plt.tight_layout()
-        plt.show()
-        
-        # Análisis por categoría (año más reciente)
-        latest_year = veg_data['anio'].max()
-        veg_latest = veg_data[veg_data['anio'] == latest_year]
-        
-        categoria_counts = veg_latest['categoria'].value_counts()
-        
-        fig, ax = plt.subplots(figsize=(10, 6))
-        colors_cat = [THEME['accent'], THEME['secondary'], THEME['primary'], THEME['highlight']][:len(categoria_counts)]
-        wedges, texts, autotexts = ax.pie(categoria_counts.values, labels=categoria_counts.index, 
-                                          autopct='%1.1f%%', colors=colors_cat, startangle=90)
-        ax.set_title(f'Composición de cobertura vegetal en Michoacán ({latest_year})', 
-                    fontsize=14, fontweight='bold')
-        for autotext in autotexts:
-            autotext.set_color('white')
-            autotext.set_fontweight('bold')
-        plt.tight_layout()
-        plt.show()
-        
-        # Análisis de presión por sitio
-        presion_sitio = (
-            veg_latest.groupby('id_conglomerado')
-            .agg({'es_forestal': lambda x: (x.sum() / len(x)) * 100})
-            .rename(columns={'es_forestal': 'porc_forestal'})
-        )
-        
-        presion_sitio['presion_clasificacion'] = pd.cut(
-            presion_sitio['porc_forestal'],
-            bins=[0, 25, 50, 100],
-            labels=['Alta\n(<25%)', 'Media\n(25-50%)', 'Baja\n(>50%)']
-        )
-        
-        presion_counts = presion_sitio['presion_clasificacion'].value_counts().sort_index()
-        
-        fig, ax = plt.subplots(figsize=(10, 6))
-        colors_presion = [THEME['alert'], THEME['secondary'], THEME['accent']][:len(presion_counts)]
-        ax.bar(range(len(presion_counts)), presion_counts.values, color=colors_presion, alpha=0.8)
-        ax.set_xticks(range(len(presion_counts)))
-        ax.set_xticklabels(presion_counts.index)
-        ax.set_ylabel('Número de conglomerados de muestreo')
-        ax.set_title(f'Clasificación de sitios por presión antrópica (Michoacán, {latest_year})', 
-                    fontsize=14, fontweight='bold')
-        for i, v in enumerate(presion_counts.values):
-            ax.text(i, v + 0.3, str(v), ha='center', fontweight='bold')
-        plt.tight_layout()
-        plt.show()
-        
-        print("Datos de vegetación/transectos cargados y visualizados")
-else:
-    print("No se encontraron archivos de vegetación/transectos")
+fig_bubble = px.scatter(
+    df_maestro, 
+    x="ha_aguacate", 
+    y="pct_bosque", 
+    size="ton_aguacate", 
+    color="impact_ratio",
+    hover_name="municipio",
+    labels={
+        "ha_aguacate": "Superficie Aguacate (Ha)", 
+        "pct_bosque": "% Salud Forestal", 
+        "impact_ratio": "Índice de Invasión",
+    },
+    color_continuous_scale=px.colors.diverging.RdYlGn[::-1],
+    range_color=[0.2, 1.2],
+)
+fig_bubble.update_traces(marker=dict(line=dict(width=1, color="white")))
+fig_bubble.update_layout(**LAYOUT_DARK)
+fig_bubble.show()
 ```
 
----
-
-**Indicadores clave:**
-- Porcentaje de cobertura forestal año a año.
-- Distribución de sitios bajo alta presión antrópica.
-- Cambios en composición de vegetación (bosque → pastizal/cultivo).
-
-## Sección III. 
-
-Demostrar la relación entre variables agrícolas y pérdida forestal.
+### Column {width=50%}
 
 ```{python}
-# ============================================================================
-# SECCIÓN III: CLÍMAX - Correlación y relación causal
-# ============================================================================
+#| title: "Treemap: Distribución Nacional del Aprovechamiento Maderable"
 
-# Intentar correlacionar serie_micho (si existe) con cobertura_anio
-correlacion_data = None
+df_bio_clean = df_bio[~df_bio["entidad"].str.startswith("00")].copy()
+df_melt = df_bio_clean.melt(
+    id_vars=["entidad"],
+    value_vars=["Pino", "Encino", "Otras"],
+    var_name="Especie",
+    value_name="Volumen",
+)
+df_melt = df_melt[df_melt["Volumen"] > 0]
 
-if 'serie_micho' in locals() and not serie_micho.empty and 'cobertura_anio' in locals() and not cobertura_anio.empty:
-    # Merge por año
-    merged = pd.merge(serie_micho, cobertura_anio, left_on='anio', right_on='anio', how='inner')
-    
-    if len(merged) > 2:  # Mínimo 3 puntos para correlación significativa
-        correlacion_data = merged.copy()
-        
-        # Calcular correlación
-        corr_coef = correlacion_data['cosechada'].corr(correlacion_data['porcentaje_forestal'])
-        
-        # Gráfica de dispersión
-        fig, ax = plt.subplots(figsize=(10, 6))
-        ax.scatter(correlacion_data['cosechada'], correlacion_data['porcentaje_forestal'], 
-                  s=150, alpha=0.7, color=THEME['alert'], edgecolors='black', linewidth=1.5)
-        
-        # Línea de tendencia
-        z = np.polyfit(correlacion_data['cosechada'], correlacion_data['porcentaje_forestal'], 1)
-        p = np.poly1d(z)
-        x_line = np.linspace(correlacion_data['cosechada'].min(), correlacion_data['cosechada'].max(), 100)
-        ax.plot(x_line, p(x_line), color=THEME['secondary'], linewidth=2.5, linestyle='--', label='Tendencia')
-        
-        ax.set_xlabel('Superficie cosechada de aguacate (hectáreas)', fontsize=11)
-        ax.set_ylabel('Cobertura forestal (%)', fontsize=11)
-        ax.set_title(f'Relación entre expansión de aguacate y cobertura forestal\n(r = {corr_coef:.3f})', 
-                    fontsize=14, fontweight='bold')
-        ax.legend()
-        ax.grid(True, alpha=0.3)
-        plt.tight_layout()
-        plt.show()
-        
-        # Interpretación
-        if corr_coef < -0.5:
-            interpretacion = "Correlación negativa fuerte: mayor expansión de aguacate está asociada con menor cobertura forestal."
-        elif corr_coef < -0.3:
-            interpretacion = "Correlación negativa moderada: existe una relación inversa entre aguacate y bosque."
-        elif corr_coef > 0.5:
-            interpretacion = "Correlación positiva fuerte: podría haber sincronización en dinámicas o control forestal simultáneo."
-        else:
-            interpretacion = "Correlación débil: se requiere análisis espacial más detallado para establecer causalidad."
-        
-        print(f"\nCoeficiente de correlación (r): {corr_coef:.3f}")
-        print(f"Interpretación: {interpretacion}")
-        print(f"\n**Hallazgo principal:**")
-        print(f"La expansión del monocultivo de aguacate en Michoacán durante {correlacion_data['anio'].min()}-{correlacion_data['anio'].max()}")
-        print(f"coincide con una pérdida promedio de {(correlacion_data['porcentaje_forestal'].min() - correlacion_data['porcentaje_forestal'].max()):.1f}% ")
-        print(f"en la cobertura forestal, sugiriendo una presión ambiental significativa.")
-else:
-    print("Datos insuficientes para análisis de correlación (se necesitan series temporales emparejadas)")
+fig_tree = px.treemap(
+    df_melt,
+    path=["Especie", "entidad"],
+    values="Volumen",
+    color="Especie",
+    color_discrete_map={"Pino": "#2E8B57", "Encino": "#8B4513", "Otras": "#DAA520"},
+)
+fig_tree.update_traces(textinfo="label+percent parent")
+fig_tree.update_layout(**LAYOUT_DARK)
+fig_tree.show()
 ```
 
----
+## Row {height=41%}
 
-**Evidencia estadística:**
+### Column {width=50%}
 
+```{python}
+#| title: "Impacto Directo: Producción vs Pérdida Forestal (2012-2024)"
 
-**Versión:** 1.0 | **Última actualización:** 14 de abril de 2026 | **Fuentes:** SIAP, INEGI, CONABIO
+df_agri_f = df_agri[df_agri["loss_year"] >= 2012].copy()
+years = np.arange(2012, 2025)
+prod_vals = {2012: 1.1, 2017: 1.9, 2019: 2.1, 2022: 3.42}
+production = np.interp(years, list(prod_vals.keys()), list(prod_vals.values()))
+
+fig_imp = go.Figure()
+fig_imp.add_trace(go.Bar(
+    x=df_agri_f["loss_year"],
+    y=df_agri_f["loss_area_ha"],
+    name="Pérdida forestal (Ha)",
+    marker_color=ROJO,
+    opacity=0.5,
+))
+fig_imp.add_trace(go.Scatter(
+    x=years,
+    y=production,
+    name="Producción Aguacate (M Ton)",
+    mode="lines+markers",
+    line=dict(color=VERDE, width=3),
+    marker=dict(size=6),
+    yaxis="y2",
+))
+fig_imp.update_layout(
+    **LAYOUT_DARK,
+    yaxis=dict(title="Ha Perdidas", gridcolor="rgba(255,255,255,0.05)", title_font=dict(size=10)),
+    yaxis2=dict(title="Millones Ton", overlaying="y", side="right", title_font=dict(size=10)),
+    xaxis=dict(title="Año", gridcolor="rgba(255,255,255,0.05)", title_font=dict(size=10)),
+    legend=dict(orientation="h", yanchor="top", y=-0.18, xanchor="center", x=0.5, font=dict(size=9)),
+    barmode="overlay",
+)
+fig_imp.show()
+```
+
+### Column {width=50%}
+
+```{python}
+#| title: "Evolución de Pérdida de Bosque por Motor"
+
+fig_evol = px.bar(
+    df_drivers, 
+    x="loss_year", 
+    y="loss_area_ha", 
+    color="drivers_type",
+    labels={"loss_year": "Año", "loss_area_ha": "Hectáreas Perdidas", "drivers_type": "Motor"},
+)
+fig_evol.update_layout(
+    **LAYOUT_DARK,
+    xaxis=dict(gridcolor="rgba(255,255,255,0.05)", title_font=dict(size=10)),
+    yaxis=dict(gridcolor="rgba(255,255,255,0.05)", title_font=dict(size=10)),
+    legend=dict(orientation="h", yanchor="top", y=-0.18, xanchor="center", x=0.5, font=dict(size=8)),
+    barmode="stack",
+)
+fig_evol.show()
+```
