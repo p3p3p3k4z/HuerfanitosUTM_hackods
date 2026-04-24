@@ -68,5 +68,12 @@
     "title": "El costo oculto del Oro Verde",
     "section": "6 Sección III.",
     "text": "6 Sección III.\nDemostrar la relación entre variables agrícolas y pérdida forestal.\n\nEvidencia estadística:\nVersión: 1.0 | Última actualización: 14 de abril de 2026 | Fuentes: SIAP, INEGI, CONABIO"
+  },
+  {
+    "objectID": "ai-log.html",
+    "href": "ai-log.html",
+    "title": "AI-LOG",
+    "section": "",
+    "text": "AI-LOG\n\n\n\n\n\n\n\n\n\nfecha\nTarea\nPrompt\nResultado\n\n\n\n\n9-04-26\nCreacion licencia\ncomo obtengo con curl la licencia Licencia CC BY-SA desde la terminal ?\nLicencia CC"
   }
 ]
