@@ -27,6 +27,7 @@ execute:
 from pathlib import Path
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -141,41 +142,45 @@ fig_tree.show()
 ## Row {height=41%}
 
 ### Column {width=50%}
-
+ 
 ```{python}
 #| title: "Impacto Directo: Producción vs Pérdida Forestal (2012-2024)"
 
+COLORS = {
+    "verde": VERDE,
+    "cafe": "#8D6E63",
+}
+
 df_agri_f = df_agri[df_agri["loss_year"] >= 2012].copy()
+
+# Serie de producción (2012-2024) interpolada desde puntos ancla
 years = np.arange(2012, 2025)
 prod_vals = {2012: 1.1, 2017: 1.9, 2019: 2.1, 2022: 3.42}
 production = np.interp(years, list(prod_vals.keys()), list(prod_vals.values()))
 
-fig_imp = go.Figure()
-fig_imp.add_trace(go.Bar(
-    x=df_agri_f["loss_year"],
-    y=df_agri_f["loss_area_ha"],
-    name="Pérdida forestal (Ha)",
-    marker_color=ROJO,
-    opacity=0.5,
-))
-fig_imp.add_trace(go.Scatter(
-    x=years,
-    y=production,
-    name="Producción Aguacate (M Ton)",
-    mode="lines+markers",
-    line=dict(color=VERDE, width=3),
-    marker=dict(size=6),
-    yaxis="y2",
-))
-fig_imp.update_layout(
-    **LAYOUT_DARK,
-    yaxis=dict(title="Ha Perdidas", gridcolor="rgba(255,255,255,0.05)", title_font=dict(size=10)),
-    yaxis2=dict(title="Millones Ton", overlaying="y", side="right", title_font=dict(size=10)),
-    xaxis=dict(title="Año", gridcolor="rgba(255,255,255,0.05)", title_font=dict(size=10)),
-    legend=dict(orientation="h", yanchor="top", y=-0.18, xanchor="center", x=0.5, font=dict(size=9)),
-    barmode="overlay",
+fig, ax1 = plt.subplots(figsize=(12, 6))
+
+_ = ax1.set_xlabel("Anio")
+_ = ax1.set_ylabel("Produccion Aguacate (Millones Ton)", color=COLORS["verde"])
+ax1.plot(years, production, color=COLORS["verde"], marker="o", linewidth=3, zorder=3)
+_ = ax1.tick_params(axis="y", labelcolor=COLORS["verde"])
+_ = ax1.set_xticks(years)
+
+ax2 = ax1.twinx()
+_ = ax2.set_ylabel("Perdida por Agricultura Permanente (Ha)", color=COLORS["cafe"])
+ax2.bar(
+    df_agri_f["loss_year"],
+    df_agri_f["loss_area_ha"],
+    color=COLORS["cafe"],
+    alpha=0.35,
+    label="Perdida GFW (Agri)",
+    zorder=1,
 )
-fig_imp.show()
+_ = ax2.tick_params(axis="y", labelcolor=COLORS["cafe"])
+
+_ = plt.title("Impacto Directo: Produccion vs Perdida Forestal por Agricultura (2012-2024)")
+fig.tight_layout()
+plt.show()
 ```
 
 ### Column {width=50%}
