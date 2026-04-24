@@ -1,7 +1,7 @@
 ---
 title: "El costo oculto del Oro Verde"
-subtitle: "Monocultivo de aguacate y deforestación en Michoacán (2012-2024)"
-author: "Equipo HackODS"
+subtitle: "Monocultivo de aguacate y deforestación en Michoacán"
+author: "HuerfanitosUTM"
 date: "2026-04-14"
 format:
   html:
@@ -93,7 +93,7 @@ def _fix_mojibake_cols(df):
 
 ## Pregunta central
 
-¿En qué medida la expansión del monocultivo de aguacate ha impulsado la deforestación de los bosques templados en Michoacán durante el periodo 2012-2024?
+¿En qué medida la expansión del monocultivo de aguacate compromete la integridad de los ecosistemas forestales en Michoacán y el cumplimiento de las metas del ODS 15?
 
 ## Fuentes de datos
 

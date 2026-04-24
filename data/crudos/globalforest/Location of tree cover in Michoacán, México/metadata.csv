@@ -1,0 +1,9 @@
+title,Location of tree cover in Michoacán, México
+threshold,30
+decile,30
+extent_year,2010
+unit,ha
+page_size,5
+date_downloaded,2026-04-23
+metadata,https://api.resourcewatch.org/v1/gfw-metadata/widget_tree_cover
+link,https://www.globalforestwatch.org/dashboards/country/MEX/16/
