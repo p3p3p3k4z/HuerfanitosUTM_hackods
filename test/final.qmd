@@ -1,0 +1,129 @@
+---
+title: "ODS 15: Vida de Ecosistemas Terrestres"
+format:
+  dashboard:
+    theme: litera
+    css: final_theme.css
+    orientation: columns
+---
+```{python}
+import json
+import os
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import seaborn as sns
+from scipy.stats import pearsonr
+
+plt.rcParams["figure.figsize"] = (12, 6)
+plt.rcParams["axes.titlesize"] = 14
+plt.rcParams["axes.labelsize"] = 11
+
+DATA_DIR = "../data/procesados/"
+COLORS = {
+    "verde": "#2E8B57",
+    "cafe": "#8B4513",
+    "miel": "#DAA520",
+    "rojo": "#F44336",
+}
+
+REQUIRED_FILES = {
+    "dataset_maestro_ods15.csv": "Base de datos municipal de Michoacan.",
+    "contexto_nacional_ods15.csv": "Comparativa interestatal nacional.",
+    "biodiversidad_especies_ods15.csv": "Volumen maderable por especie.",
+    "gestion_ambiental_ods15.csv": "Brecha de apoyo ambiental.",
+    "impact_coefficients.json": "Coeficientes de impacto tecnico.",
+}
+
+
+def audit_workspace(data_dir, files_dict):
+  for filename, description in files_dict.items():
+    path = os.path.join(data_dir, filename)
+    if not os.path.exists(path):
+      raise FileNotFoundError(f"ERROR: El archivo {filename} no existe en {data_dir}.")
+
+
+audit_workspace(DATA_DIR, REQUIRED_FILES)
+```
+## Column {width="50%"}
+
+::: {.card style="height: 29vh; display:flex; align-items:center; justify-content:center; font-size:64px;"}
+📊
+:::
+
+::: {.card style="height: 29vh; display:flex; align-items:center; justify-content:center; font-size:64px;"}
+🧭
+:::
+
+::: {.card style="height: 29vh; display:flex; align-items:center; justify-content:center; font-size:64px;"}
+🗂️
+:::
+
+## Column {width="50%"}
+
+```{python}
+# Carga de datos historicos de perdida de cobertura (Real GFW 2001-2024)
+path_loss = "../data/crudos/globalforest/Tree cover loss in Michoacán, México/treecover_loss__ha.csv"
+df_loss = pd.read_csv(path_loss)
+df_loss = df_loss[df_loss["umd_tree_cover_loss__year"] >= 2012]
+
+# Datos de produccion (Puntos reales 2017, 2019, 2022 interpolados para la tendencia)
+years = np.arange(2012, 2025)
+prod_vals = {2012: 1.1, 2017: 1.9, 2019: 2.1, 2022: 3.42}
+production = np.interp(years, list(prod_vals.keys()), list(prod_vals.values()))
+
+fig, ax1 = plt.subplots(figsize=(12, 4))
+
+_ = ax1.plot(years, production, color=COLORS["verde"], marker="o", linewidth=2, label="Produccion (SIAP/INEGI)")
+ax1.set_xlabel("")
+ax1.set_ylabel("")
+ax1.tick_params(axis="x", labelsize=0, length=0)
+ax1.tick_params(axis="y", labelcolor=COLORS["verde"], labelsize=0, length=0)
+
+ax2 = ax1.twinx()
+_ = ax2.plot(
+  df_loss["umd_tree_cover_loss__year"],
+  df_loss["umd_tree_cover_loss__ha"],
+  color=COLORS["cafe"],
+  linestyle="--",
+  marker="x",
+  alpha=0.7,
+  label="Perdida Forestal (GFW)",
+)
+ax2.set_ylabel("")
+ax2.tick_params(axis="y", labelcolor=COLORS["cafe"], labelsize=0, length=0)
+ax2.set_yticks([])
+
+fig.tight_layout()
+plt.show()
+```
+
+```{python}
+# Carga de serie historica de perdida agricola
+df_agri = pd.read_csv(os.path.join(DATA_DIR, "gfw_historico_agricola_mich.csv"))
+df_agri = df_agri[df_agri["loss_year"] >= 2012]
+
+# Datos de produccion (Serie real 2012-2022)
+years = np.arange(2012, 2025)
+prod_vals = {2012: 1.1, 2017: 1.9, 2019: 2.1, 2022: 3.42}
+production = np.interp(years, list(prod_vals.keys()), list(prod_vals.values()))
+
+fig, ax1 = plt.subplots(figsize=(12, 4))
+_ = ax1.plot(years, production, color=COLORS["verde"], marker="o", linewidth=3)
+ax1.set_xlabel("")
+ax1.set_ylabel("")
+ax1.tick_params(axis="x", labelsize=0, length=0)
+ax1.tick_params(axis="y", labelcolor=COLORS["verde"], labelsize=0, length=0)
+
+ax2 = ax1.twinx()
+_ = ax2.bar(df_agri["loss_year"], df_agri["loss_area_ha"], color=COLORS["cafe"], alpha=0.3, label="Perdida GFW (Agri)")
+ax2.set_ylabel("")
+ax2.tick_params(axis="y", labelcolor=COLORS["cafe"], labelsize=0, length=0)
+ax2.set_yticks([])
+
+fig.tight_layout()
+plt.show()
+```

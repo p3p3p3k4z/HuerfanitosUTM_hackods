@@ -12,6 +12,11 @@ Este proyecto integra datos oficiales para el análisis del ODS 15 (Vida de Ecos
 - **[CONAFOR - Estadística Forestal](https://snif.cnf.gob.mx/datos-abiertos/)**: Biodiversidad de especies arbóreas y acciones de protección.
 - **[Agenda 2030 México - SIODS](https://agenda2030.mx/ODSGoalSelected.html?ti=T&cveArb=ODS0150&goal=0&lang=es#/ind)**: Indicadores de deforestación y cobertura forestal.
 
+<<<<<<< HEAD
+Los datos fueron obtenidos de:
+[INEGI](https://www.inegi.org.mx/)
+
+=======
 Para detalles técnicos adicionales, consulte [transparencia_fuentes_ods15.json](file:///home/m4r10/Documents/projects/HuerfanitosUTM_hackods/data/procesados/transparencia_fuentes_ods15.json).
 
 ## ODS Elegidos
@@ -67,3 +72,4 @@ Este proyecto utiliza `uv` para la gestión de dependencias, garantizando reprod
    ```bash
    uv run jupyter notebook notebooks/blabla.ipynb
    ```
+>>>>>>> 0b5f451eb98075114b133cf027be9b46313f7f9e
