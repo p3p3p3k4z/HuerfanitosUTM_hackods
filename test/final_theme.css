@@ -1,0 +1,28 @@
+:root {
+  --solid-blue: #0d3b66;
+  --solid-orange: #f95738;
+  --solid-white: #ffffff;
+  --ink-dark: #1f2937;
+}
+
+body {
+  background: var(--solid-white);
+  color: var(--ink-dark);
+}
+
+.quarto-dashboard .card,
+.dashboard .card {
+  background: var(--solid-white);
+  border: 3px solid var(--solid-blue);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.quarto-dashboard .card p,
+.dashboard .card p {
+  margin: 0;
+}
+
+.quarto-dashboard .card {
+  color: var(--solid-orange);
+}
